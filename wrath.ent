@@ -1,0 +1,2612 @@
+<?xml version="1.0"?>
+<classes>
+
+<!--
+===============================================================================
+
+Kell's Proper Professional Personally Procured Entity File Because PyroGXPilot Has Been Perfectly Patient
+
+===============================================================================
+-->
+
+
+<!--
+===============================================================================
+
+ Q3MAP2 ENTITIES
+
+===============================================================================
+-->
+
+<group name="_decal" color="0 1.0 0">
+-------- KEYS --------
+<target key="target" name="Target">The name of the entity targeted for projection.</target>
+-------- NOTES --------
+Compiler-only entity that specifies a decal to be projected. Should contain 1 or more patch meshes (curves) and target an info_null entity. Patch mesh should be using a shader with "polygonoffset" (or other blending methods) or z-fighting will occur. The distance between the center of the _decal entity and the target is the axis and distance of projection.
+</group>
+
+<point name="_skybox" color="0.77 0.88 1.0" box="-4 -4 -4 4 4 4">
+-------- KEYS --------
+<angle key="angle" name="Yaw Angle">Rotation angle of the sky surfaces.</angle>
+<angles key="angles" name="Pitch Yaw Roll">Individual control of PITCH, YAW, and ROLL (default 0 0 0).</angles>
+<real key="_scale" name="Scale" value="64">Scaling factor (default 64), good values are between 50 and 300, depending on the map.</real>
+-------- NOTES --------
+Compiler-only entity that specifies the origin of a skybox (a wholly contained, separate area of the map), similar to some games portal skies. When compiled with Q3Map2, the skybox surfaces will be visible from any place where sky is normally visible. It will cast shadows on the normal parts of the map, and can be used with cloud layers and other effects.
+</point>
+
+
+<!--
+===============================================================================
+
+SOUND ENTITIES
+
+===============================================================================
+-->
+
+<point name="soundbox" color="0 1 0.2" box="-16 -16 -16 16 16 16">
+<string key="noise" name="noise"></string>
+<real key="rad_sound" name="rad_sound"></real>
+<real key="volume" name="volume"></real>
+</point>
+
+<point name="randomsoundbox" color="0 1 0" box="-16 -16 -16 16 16 16">
+<flag key="2dsound" name="2D sound" bit="5">2D sound only</flag>
+<string key="noise" name="noise"></string>
+<real key="rad_sound" name="rad_sound"></real>
+<real key="rad_sound_inner" name="rad_sound_inner">inner sound box with no attenuation, default 0</real>
+<real key="volume" name="volume"></real>
+<real key="mindelay" name="minimum delay"></real>
+<real key="maxdelay" name="maximum delay"></real>
+</point>
+
+<!--
+=============================================================================
+
+HEALTH_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="health_life_vial" model="models/items/lifeblood_vial.md3" color="1 0 0" box="-2 -2 -8 2 2 8">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="health_life_beaker" model="models/items/lifeblood_beaker.md3" color="1 0 0" box="-6 -6 -8 6 6 8">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="health_life_chalice" model="models/items/lifeblood_chalice.md3" color="1 0 0" box="-6 -6 -8 6 6 8">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+<!--
+=============================================================================
+
+ARMOR_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="armor_shard" model="models/items/armor_shard.md3" color="1 0 0" box="-8 -8 -8 8 8 2">
+10 regular armor.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="armor_helm" model="models/items/helm.md3" color="1 0 0" box="-8 -8 -8 8 8 8">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="armor_armor" model="models/items/armor.md3" color="1 0 0" box="-14 -14 -8 14 14 20">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="armor_shard_dark" model="models/items/armor_shard_dark.md3" color="1 0 0" box="-8 -8 -8 8 8 2">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="armor_helm_dark" model="models/items/helm_dark.md3" color="1 0 0" box="-8 -8 -8 8 8 8">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="armor_armor_dark" model="models/items/armor_dark.md3" color="1 0 0" box="-14 -14 -8 14 14 20">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+
+<!--
+=============================================================================
+
+ARTIFACT_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="artifact_soul_tether" model="models/artifacts/soul_tether.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Soul Tether ( save item )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+<point name="artifact_attar" model="models/artifacts/artifact_attar.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Confounding Attar ( monster infighting potion )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="artifact_aegis" model="models/artifacts/artifact_aegis.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Cruel Aegis ( 1 health point invulnerability )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="artifact_apparatus" model="models/artifacts/artifact_apparatus.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Drowner's Apparatus ( swimming breather )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="artifact_siphon" model="models/artifacts/artifact_siphon.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Life Siphon ( heart healer )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="artifact_deflection" model="models/artifacts/artifact_deflection.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Orb Of Deflection ( static golden forcefield )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="artifact_revelation" model="models/artifacts/artifact_revelation.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Mark Of Revelation ( shows all secrets in the map )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="artifact_rage" model="models/artifacts/artifact_rage.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Flask Of Rage ( quin damage )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="artifact_grenade" model="models/artifacts/artifact_grenade.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Void Grenade ( black hole bomb )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="artifact_animus" model="models/artifacts/artifact_animus.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Vicious Animus ( bone turret )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="artifact_shockwave" model="models/artifacts/artifact_shockwave.md3" color="1 0 0" box="-8 -8 -44 8 8 0">
+Shockwave ( electric ring )
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+
+<!--
+=============================================================================
+
+WEAPON_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="weapon_blade" model="models/weapons/melee/w_blade.md3" color="0 0 .5" box="-8 -8 -24 8 8 16">
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="0">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="weapon_revolver" model="models/weapons/revolver/w_revolver.md3" color="0 0 .5" box="-8 -8 -24 8 8 16">
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="0">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="weapon_shotgun" model="models/weapons/shotgun/w_shotgun.md3" color="0 0 .5" box="-8 -8 -24 8 8 16">
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="0">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="weapon_spitter" model="models/weapons/spitter/w_spitter.md3" color="0 0 .5" box="-8 -8 -24 8 8 16">
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="0">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="weapon_retcher" model="models/weapons/retcher/w_retcher.md3" color="0 0 .5" box="-8 -8 -24 8 8 16">
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="0">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="weapon_cannon" model="models/weapons/cannon/w_cannon.md3" color="0 0 .5" box="-8 -8 -24 8 8 16">
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="0">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="weapon_lance" model="models/weapons/lance/w_lance.md3" color="0 0 .5" box="-8 -8 -24 8 8 16">
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="0">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="weapon_crystal" model="models/weapons/crystal/w_crystal.md3" color="0 0 .5" box="-8 -8 -24 8 8 16">
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="0">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+<point name="weapon_mace" model="models/weapons/mace/w_mace.md3" color="0 0 .5" box="-8 -8 -24 8 8 16">
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="0">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+<!--
+=============================================================================
+
+AMMO_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="ammo_revolver" color="1 0 0" box="-10 -10 -6 10 10 6" model="models/items/ammo_revolver.md3">
+15 Coach Gun ammo.
+-------- SPAWNFLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="ammo_shotgun" color="1 0 0" box="-10 -10 -6 10 10 6" model="models/items/ammo_shotgun.md3">
+20 shotgun ammo
+-------- SPAWNFLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="ammo_spitter" color="1 0 0" box="-8 -8 -15 8 8 15" model="models/items/ammo_spitter.md3">
+30 Fang Spitter ammo.
+-------- SPAWNFLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="ammo_retcher" color="1 0 0" box="-8 -8 -8 8 8 8" model="models/items/ammo_retcher.md3">
+3 Retcher ammo.
+-------- SPAWNFLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="ammo_cannon" color="1 0 0" box="-8 -8 -8 8 8 8" model="models/items/ammo_cannon.md3">
+3 Retcher ammo.
+-------- SPAWNFLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="ammo_lance" color="1 0 0" box="-8 -8 -8 8 8 8" model="models/items/ammo_lance.md3">
+3 Retcher ammo.
+-------- SPAWNFLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+<point name="ammo_crystal" color="1 0 0" box="-8 -8 -8 8 8 8" model="models/items/ammo_crystal.md3">
+10 Boiler ammo.
+-------- SPAWNFLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+
+<!--
+=============================================================================
+
+ITEM_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="item_readable" color=".8 .8 .4" box="-8 -8 -8 8 8 8" model="models/items/item_readable.md3">
+Lore Scroll
+<angles key="angles" name="Pitch Yaw Roll">Individual control of PITCH, YAW, and ROLL (default 0 0 0).</angles>
+-------- SPAWNFLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+<real key="note" name="Note number.">Number of note file, containing flavour text.</real>
+</point>
+
+<point name="item_donor" color=".5 0.6 0.5" box="-12 -12 -16 12 12 16">
+Gives items to the player when the map is loaded.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+
+<real key="fweapon_revolver" name="Revolver" value="0"></real>
+<real key="fweapon_shotgun" name="Shotgun" value="0"></real>
+<real key="fweapon_spitter" name="Fang Spitter" value="0"></real>
+<real key="fweapon_retcher" name="Retcher" value="0"></real>
+<real key="fweapon_cannon" name="Slag Cannon" value="0"></real>
+<real key="fweapon_lance" name="Lance" value="0"></real>
+<real key="fweapon_crystal" name="Crystalliser" value="0"></real>
+<real key="fweapon_mace" name="Mace" value="0"></real>
+
+<real key="ammo_revolver" name="Ammo Revolver" value="0"></real>
+<real key="ammo_shotgun" name="Ammo Shotgun" value="0"></real>
+<real key="ammo_spitter" name="Ammo Spitter" value="0"></real>
+<real key="ammo_retcher" name="Ammo Retcher" value="0"></real>
+<real key="ammo_cannon" name="Ammo SlagCannon" value="0"></real>
+<real key="ammo_lance" name="Ammo Lance" value="0"></real>
+<real key="ammo_crystal" name="Ammo Crystalliser" value="0"></real>
+<real key="ammo_mace" name="Ammo Mace" value="0"></real>
+
+<real key="rarmorvalue" name="Armor Value" value="0"></real>
+<real key="darmorvalue" name="Dark Armor Value" value="0"></real>
+
+<real key="SoulTether" name="Soul Tether" value="0"></real>
+<real key="LifeSiphon" name="Life Siphon" value="0"></real>
+<real key="OrbOfDeflection" name="Orb Of Deflection" value="0"></real>
+<real key="Attar" name="Confounding Attar" value="0"></real>
+<real key="Aegis" name="Cruel Aegis" value="0"></real>
+<real key="FlaskOfRage" name="Flask Of Rage" value="0"></real>
+<real key="DrownerApp" name="Drowner's Apparatus" value="0"></real>
+<real key="MarkRevelation" name="Mark of Revelation" value="0"></real>
+<real key="VoidGrenade" name="Void Grenade" value="0"></real>
+<real key="ViciousIdol" name="Vicious Idol" value="0"></real>
+<real key="ShockWave" name="Shockwave" value="0"></real>
+</point>
+
+<point name="item_donor_map" color=".5 0.7 0.5" box="-12 -12 -16 12 12 16">
+Gives items to the player when the map is loaded via 'map' console command.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+
+<real key="fweapon_revolver" name="Revolver" value="0"></real>
+<real key="fweapon_shotgun" name="Shotgun" value="0"></real>
+<real key="fweapon_spitter" name="Fang Spitter" value="0"></real>
+<real key="fweapon_retcher" name="Retcher" value="0"></real>
+<real key="fweapon_cannon" name="Slag Cannon" value="0"></real>
+<real key="fweapon_lance" name="Lance" value="0"></real>
+<real key="fweapon_crystal" name="Crystalliser" value="0"></real>
+<real key="fweapon_mace" name="Mace" value="0"></real>
+
+<real key="ammo_revolver" name="Ammo Revolver" value="0"></real>
+<real key="ammo_shotgun" name="Ammo Shotgun" value="0"></real>
+<real key="ammo_spitter" name="Ammo Spitter" value="0"></real>
+<real key="ammo_retcher" name="Ammo Retcher" value="0"></real>
+<real key="ammo_cannon" name="Ammo Slag Cannon" value="0"></real>
+<real key="ammo_lance" name="Ammo Lance" value="0"></real>
+<real key="ammo_crystal" name="Ammo Crystalliser" value="0"></real>
+<real key="ammo_mace" name="Ammo Mace" value="0"></real>
+
+<real key="rarmorvalue" name="Armor Value" value="0"></real>
+<real key="darmorvalue" name="Dark Armor Value" value="0"></real>
+
+<real key="SoulTether" name="Soul Tether" value="0"></real>
+<real key="LifeSiphon" name="Life Siphon" value="0"></real>
+<real key="OrbOfDeflection" name="Orb Of Deflection" value="0"></real>
+<real key="Attar" name="Confounding Attar" value="0"></real>
+<real key="Aegis" name="Cruel Aegis" value="0"></real>
+<real key="FlaskOfRage" name="Flask Of Rage" value="0"></real>
+<real key="DrownerApp" name="Drowner's Apparatus" value="0"></real>
+<real key="MarkRevelation" name="Mark of Revelation" value="0"></real>
+<real key="VoidGrenade" name="Void Grenade" value="0"></real>
+<real key="ViciousIdol" name="Vicious Idol" value="0"></real>
+<real key="Shockwave" name="Shockwave" value="0"></real>
+</point>
+
+<!--
+=============================================================================
+
+SPAWNER ENTITIES
+
+=============================================================================
+-->
+
+<point name="item_spawner" color="1 .5 0" box="-8 -8 -16 8 8 16">
+Spawn items entity
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+<real key="classitem1" name="encounter 1: 0 relics" value="1">
+		1 : "Soul Tether"
+
+		2 : "Slugs ( Revolver )"
+		3 : "Shells ( Shotgun )"
+		4 : "Fangs ( Spitter )"
+		5 : "Cysts ( Retcher )"
+		6 : "Ore ( Slag Cannon )"
+		7 : "Spore ( Lance )"
+		8 : "Crystals ( Boiler? )"
+
+		10 : "Health Vial"
+		11 : "Health Beaker"
+		12 : "Health Chalice"
+		13 : "Armor Shard"
+		14 : "Armor Body"
+		15 : "Armor Helm"
+		16 : "Dark Armor Shard"
+		17 : "Dark Armor Body"
+		18 : "Dark Armor Helm"
+
+		21 : "Mark of Revelation"
+		22 : "Drowners Apparatus"
+		23 : "Flask Of Rage"
+		24 : "Confounding Attar"
+		25 : "Void Grenade"
+		26 : "Artifact Siphon"
+		27 : "Orb Of Deflection"
+		28 : "Cruel Aegis"
+		29 : "Vicious Animus"
+		30 : "Shockwave"
+</real>
+<real key="classitem2" name="encounter 2: 1 relics" value="1"></real>
+<real key="classitem3" name="encounter 3: 2 relics" value="1"></real>
+<real key="classitem4" name="encounter 4: 3 relics" value="1"></real>
+<real key="classitem5" name="encounter 5: 4 relics" value="1"></real>
+<boolean key="checkweapon" name="Check Weapon"> Remove if relative weapon is not present (only valid for ammo)</boolean>
+<real key="item_ammount" name="Amount of ammo, only replace this to change default values (ammo only)" value="0"> number of ammo ammount </real>
+<target key="target" name="Target">Target for the spawned items.</target>
+<targetname key="targetname" name="Target Name"> A func_button or trigger is required to activate it.</targetname>
+</point>
+
+
+<point name="weapon_spawner" color="0 1 1" box="-16 -16 0 16 16 64">
+Spawn weapons entity
+-------- FLAGS --------
+<flag key="INSPECT" name="Inspect Animation" bit="1">Play inpect animation when pickup up.</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+<real key="classweapon1" name="Encounter 1 Weapon, 0 relics" value="1">
+        1 : "Revolver"
+		2 : "Shotgun"
+		3 : "Fang Spitter"
+		4 : "Retcher"
+		5 : "Slag Cannon"
+		6 : "Lance"
+		7 : "Crystaliser"
+		8 : "Mace"
+</real>
+<real key="classweapon2" name="Encounter 2 Weapon, 1 relics" value="1"></real>
+<real key="classweapon3" name="Encounter 3 Weapon, 2 relics" value="1"></real>
+<real key="classweapon4" name="Encounter 4 Weapon, 3 relics" value="1"></real>
+<real key="classweapon5" name="Encounter 5 Weapon, 4 relics" value="1"></real>
+<target key="target" name="Target">Target for the spawned weapons.</target>
+<targetname key="targetname" name="Target Name"> A func_button or trigger is required to activate it.</targetname>
+</point>
+
+
+<point name="enemy_spawner" color="1 1 0" box="-16 -16 -32 16 16 32">
+Spawner enemies entity
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+<real key="classmonster1" name="Encounter" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<real key="classmonster2" name="Encounter1" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<real key="classmonster3" name="Encounter2" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<real key="classmonster4" name="Encounter3" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<real key="classmonster5" name="Encounter4" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to activate the door (unless using health key).</targetname>
+<string key="death_target" name="Death Target">All entities with a matching targetname will be triggered once the monster is killed.</string>
+<real key="type" name="SpawnAngry" value="0"> 1 = monster will wake up being furious and following the player (fallen will spawn attacking) </real>
+<real key="likecharge" name="Spawn Charging" value="0">Enemy spawns in the charging state.</real>
+<real key="count" name="Amount of monsters" value="1"> number of monsters to spawn </real>
+<real key="wait" name="Wait delay" value="0">Number of seconds before the first spawn.</real>
+<real key="delay" name="Delay" value="5"> if the amount of monsters to spawn is bigger than 1, this will be the time between each spawn </real>
+<real key="rise" name="Rise Animation" value="0"> 1 =  rise animation (if present) </real>
+<real key="nojump" name="No Jumpp" value="0"> 1 =  monster will ignore jumppads and trigger_monsterjumps </real>
+<real key="turret" name="Turret" value="0"> Monster will not run, just shoot </real>
+</point>
+
+<point name="enemy_spawner_warp" color="1 0 .3" box="-32 -32 -64 32 32 64">
+Spawner enemies entity, using warp
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+<real key="classmonster1" name="Encounter" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<real key="classmonster2" name="Encounter1" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<real key="classmonster3" name="Encounter2" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<real key="classmonster4" name="Encounter3" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<real key="classmonster5" name="Encounter4" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying mechanical brain )
+</real>
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<string key="death_target" name="Death Target">All entities with a matching targetname will be triggered once the monster is killed.</string>
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to activate the door (unless using health key).</targetname>
+<real key="likecharge" name="Spawn Charging" value="0">Enemy spawns in the charging state.</real>
+<real key="nojump" name="No Jumpp" value="0"> 1 =  monster will ignore jumppads and trigger_monsterjumps </real>
+<real key="fastwarp" name="No Vortex animation" value="0"> 1 =  Vortex animation will be skipped </real>
+<real key="type" name="SpawnAngry" value="0"> 1 = monster will wake up being furious and following the player </real>
+<real key="rise" name="Rise Animation" value="0"> 1 =  rise animation (if present) </real>
+</point>
+
+
+
+<!--
+=============================================================================
+
+MONSTER_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="monster_lurker" color="1 0 0" box="-32 -32 -32 32 32 32" model="models/enemies/lurker/lurker.md3">
+Lurker ( nopefish )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_fallen" color="1 0 0" box="-16 -16 -32 16 16 32" model="models/enemies/fallen/fallen1.md3">
+Fallen ( zombie )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_invader" color="1 0 0" box="-16 -16 -32 16 16 32" model="models/enemies/invader/invader.md3">
+Invader ( shotgunner zombie )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_widow" color="1 0 0" box="-16 -16 -32 16 16 32" model="models/enemies/widow/widow.md3">
+Widow ( fast zombie )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_wretch" color="1 0 0" box="-16 -16 -32 16 16 32" model="models/enemies/wretch/wretch.md3">
+Wretch ( plasma shooter )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_wraith" color="1 0 0" box="-16 -16 -32 16 16 32" model="models/enemies/wraith/wraith.md3">
+Wraith ( plasma scrag )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_heretic" color="1 0 0" box="-32 -32 -32 32 32 32" model="models/enemies/heretic/heretic.md3">
+Heretic ( grey cacodemon )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_oppressor" color="1 0 0" box="-16 -16 0 16 16 64" model="models/enemies/oppressor/oppressor.md3">
+Oppressor ( lava revenenant )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_afflicted" color="1 0 0" box="-16 -16 -32 16 16 32" model="models/enemies/afflicted/afflicted.md3">
+Afflicted ( slime zombie )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_stricken" color="1 0 0" box="-48 -48 -32 48 48 32" model="models/enemies/stricken/stricken.md3">
+Stricken ( artillery frog )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+<point name="monster_executioner" color="1 0 0" box="-32 -32 -32 32 32 52" model="models/enemies/executioner/executioner.md3">
+Executioner ( hooded blades )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+<real key="likecharge" name="Spawn Charging" value="0">Enemy spawns in the charging state.</real>
+</point>
+
+<point name="monster_prowler" color="1 0 0" box="-16 -16 -32 16 16 32" model="models/enemies/prowler/prowler.md3">
+Prowler ( invisible manspider )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_keeler" color="1 0 0" box="-16 -16 -32 16 16 32" model="models/enemies/prowler/prowler.md3">
+Keeper ( flying mechanical brain forcefield generator )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="monster_brute" color="1 0 0" box="-32 -32 -32 32 32 52" model="models/enemies/executioner/executioner.md3">
+Brute ( metal gorilla )
+-------- FLAGS --------
+<flag key="ambush" name="Ambush" bit="0">the monster will only wake up on really seeing the player, not another monster getting angry</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+
+<!--
+=============================================================================
+
+RELIC_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="relic_intro" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e1m1" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e1m2" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e1m3" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e1m4" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e1m5" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e2m1" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e2m2" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e2m3" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e2m4" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e2m5" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e3m1" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e3m2" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e3m3" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e3m4" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="relic_e3m5" model="models/items/relic.md3" color=".7 .7 .7" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+
+<!--
+=============================================================================
+
+KEY_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="key_coffer" model="models/keys/key_1_coffer.md3" color="1 0 0" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="key_blue" model="models/keys/key_1_blue.md3" color="1 0 0" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="key_yellow" model="models/keys/key_1_yellow.md3" color="1 0 0" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+<point name="key_red" model="models/keys/key_1_red.md3" color="1 0 0" box="-8 -8 -48 8 8 0">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+</point>
+
+
+
+<!--
+=============================================================================
+
+OBJECT_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="object_torch1" color="0 1 1" box="-8 -8 -8 8 8 8" model="models/objects/fixtures/torch1.md3">
+<boolean key="skin" name="Alternate">(ALTERNATE) uses an alternate flame pattern and sound effect.  Use this every other torch placement to reduce syncing of sound/animation of multiple visible torches</boolean>
+</point>
+
+<point name="object_coffer" color="0 1 1" box="-8 -8 -8 8 8 8" model="models/objects/coffers/coffer1_locked.md3">
+<real key="coffer_artifacts" name="Artifacts" value="0">	0 : "No artifacts"
+		1 : "Mark of Revelation"
+		2 : "Drowners Apparatus"
+		3 : "Flask Of Rage"
+        4 : "Confounding Attar"
+		6 : "Life Siphon"
+		7 : "Orb Of Deflection"
+		8 : "Cruel Aegis"
+		9 : "Vicious Animus"
+		10 : "Shockwave"
+		11 : "Void Grenade"
+		5 : "Soul Tether"
+</real>
+<real key="coffer_ammo" name="Ammo" value="0">	0 : "No ammo"
+		1 : "Slugs"
+		2 : "Shells"
+		3 : "Fangs"
+		4 : "Cysts"
+</real>
+<real key="coffer_armor" name="Armor" value="0">	0 : "No armor"
+		1 : "Armor shard"
+		2 : "Armor helm"
+		3 : "Armor"
+		4 : "Dark armor shard"
+		5 : "Dark helm"
+		6 : "Dark armor"
+</real>
+<real key="coffer_health" name="Health" value="0">	0 : "No health"
+		1 : "Vial of lifeblood"
+		2 : "Beaker of lifeblood"
+		3 : "Chalice of lifeblood"
+</real>
+</point>
+
+<point name="object_orrery" color="0 .6 1" box="12 12 12 -12 -12 -12" model="models/objects/orrery/orrery.md3">
+Grand orrery model for e2m5: The Watchtowers. Can be triggered to animate.
+</point>
+
+<point name="portal_intro" color=".4 .5 .4" box="24 24 12 -24 -24 -12" model="models/objects/hubs/intro_portal.md3">
+</point>
+
+<point name="object_switch" color="0 .4 1" box="-12 -12 -16 12 12 16" model="{ path : model }">
+When a switch is used by a player, it moves in the direction set by the "angle" key, triggers all its targets.
+-------- KEYS --------
+<model key="model" name="Model File" value="models/objects/switches/e1_switch1.md3" >Path/name of model to use </model>
+<direction key="angle" name="Direction">Determines the direction in which the button will move (up = -1, down = -2).</direction>
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<real key="wait" name="Return Delay" value="-1">Number of seconds button stays pressed (default 1, -1 = no return).</real>
+<real key="delay" name="Delay" value="0">delay before firing (after being used)</real>
+</point>
+
+
+
+<!--
+=============================================================================
+
+BREAKABLE ENTITIES
+
+=============================================================================
+-->
+
+<point name="breakable_urn_small" color="0 1 1" box="-12 -12 0 12 12 32" model="models/destruct/urns/urn32.md3">
+<real key="urn_health" name="Lifeblood" value="0">1 = vial, 2 = beaker</real>
+<real key="urn_armor" name="Armor" value="0">1 = armor, 2 = shard, 3 = helm</real>
+<real key="urn_ammo" name="Ammo" value="0">1 = slugs, 2 = shells, 3 = fangs, 4 = cysts</real>
+<real key="urn_artifacts" name="Artifacts" value="0">2 = Drowner's App, 4 = Confounding attar, 5 = Soul Tether, 6 = Siphon, 8 = Aegis</real>
+</point>
+
+<point name="breakable_urn_medium" color="0 1 1" box="-16 -16 0 16 16 48" model="models/destruct/urns/urn48.md3">
+<real key="urn_health" name="Lifeblood" value="0">1 = vial, 2 = beaker</real>
+<real key="urn_armor" name="Armor" value="0">1 = armor, 2 = shard, 3 = helm</real>
+<real key="urn_ammo" name="Ammo" value="0">1 = slugs, 2 = shells, 3 = fangs, 4 = cysts</real>
+<real key="urn_artifacts" name="Artifacts" value="0">2 = Drowner's App, 4 = Confounding attar, 5 = Soul Tether, 6 = Siphon, 8 = Aegis</real>
+</point>
+
+<point name="breakable_urn_large" color="0 1 1" box="-16 -16 0 16 16 64" model="models/destruct/urns/urn64.md3">
+<real key="urn_health" name="Lifeblood" value="0">1 = vial, 2 = beaker</real>
+<real key="urn_armor" name="Armor" value="0">1 = armor, 2 = shard, 3 = helm</real>
+<real key="urn_ammo" name="Ammo" value="0">1 = slugs, 2 = shells, 3 = fangs, 4 = cysts</real>
+<real key="urn_artifacts" name="Artifacts" value="0">2 = Drowner's App, 4 = Confounding attar, 5 = Soul Tether, 6 = Siphon, 8 = Aegis</real>
+</point>
+
+<point name="breakable_skull" color=".9 .8 .7" box="-12 -12 -12 12 12 12" model="{ path : model }">
+Skull breakable prop, medium and large.
+<model key="model" name="Model File" value="models/destruct/skulls/skull_a1.md3" >Path/name of model to use</model>
+<angle key="angle" name="Yaw Angle">Direction in which model will be oriented.</angle>
+<angles key="angles" name="Pitch Yaw Roll">Individual control of PITCH, YAW, and ROLL (default 0 0 0).</angles>
+<real key="type" name="Variant " value="0">
+1: Nostrilsaurus
+2: Predalike
+3: Cyclops
+4: Minotaur LARGE
+5: Sharpie
+6: Goatman
+7: Grinner
+8: Toothhound
+</real>
+<real key="urn_health" name="Lifeblood" value="0">1 = vial, 2 = beaker</real>
+<real key="urn_armor" name="Armor" value="0">1 = armor, 2 = shard, 3 = helm</real>
+<real key="urn_ammo" name="Ammo" value="0">1 = slugs, 2 = shells, 3 = fangs, 4 = cysts</real>
+<real key="urn_artifacts" name="Artifacts" value="0">1 = Mark Of Revelation, 2 = Drowner's App, 3 = Flask Of Rage, 4 = Confounding Attar, 5 = Soul Tether, 6 = Life Siphon, 7 = Orb Of Deflection, 8 = Cruel Aegis, 9 = Vicious Animus, 10 = Shockwave, 11 = Void Grenade.</real>
+</point>
+
+
+<point name="breakable_skull_small_a" color=".9 .8 .7" box="(-16 -16 -16) (16 16 16)" model="{ path : model }">
+Skull breakable prop, small humanoid.
+<model key="model" name="Model File" value="models/destructskulls/skull_a1.md3">Path/name of model to use</model>
+<angle key="angle" name="Yaw Angle">Direction in which model will be oriented.</angle>
+<angles key="angles" name="Pitch Yaw Roll">Individual control of PITCH, YAW, and ROLL (default 0 0 0).</angles>
+<real key="type" name="Variant" value="0"></real>
+<real key="urn_health" name="Lifeblood" value="0">1 = vial, 2 = beaker</real>
+<real key="urn_armor" name="Armor" value="0">1 = armor, 2 = shard, 3 = helm</real>
+<real key="urn_ammo" name="Ammo" value="0">1 = slugs, 2 = shells, 3 = fangs, 4 = cysts</real>
+<real key="urn_artifacts" name="Artifacts" value="0">2 = Drowner's App, 4 = Confounding attar, 5 = Soul Tether, 6 = Siphon, 8 = Aegis</real>
+</point>
+
+<point name="breakable_skull_small_b" color=".9 .8 .7" box="-16 -16 -16 16 16 16">
+Skull breakable prop, small humanoid.
+<model key="model" name="Model File" value="models/destructskulls/skull_a1.md3">Path/name of model to use</model>
+<angle key="angle" name="Yaw Angle">Direction in which model will be oriented.</angle>
+<angles key="angles" name="Pitch Yaw Roll">Individual control of PITCH, YAW, and ROLL (default 0 0 0).</angles>
+<real key="type" name="Variant" value="0"></real>
+<real key="urn_health" name="Lifeblood" value="0">1 = vial, 2 = beaker</real>
+<real key="urn_armor" name="Armor" value="0">1 = armor, 2 = shard, 3 = helm</real>
+<real key="urn_ammo" name="Ammo" value="0">1 = slugs, 2 = shells, 3 = fangs, 4 = cysts</real>
+<real key="urn_artifacts" name="Artifacts" value="0">2 = Drowner's App, 4 = Confounding attar, 5 = Soul Tether, 6 = Siphon, 8 = Aegis</real>
+</point>
+
+<point name="breakable_skull_small_c" color=".9 .8 .7" box="-16 -16 -16 16 16 16">
+Skull breakable prop, small humanoid.
+<model key="model" name="Model File" value="models/destructskulls/skull_a1.md3">Path/name of model to use</model>
+<angle key="angle" name="Yaw Angle">Direction in which model will be oriented.</angle>
+<angles key="angles" name="Pitch Yaw Roll">Individual control of PITCH, YAW, and ROLL (default 0 0 0).</angles>
+<real key="type" name="Variant" value="0"></real>
+<real key="urn_health" name="Lifeblood" value="0">1 = vial, 2 = beaker</real>
+<real key="urn_armor" name="Armor" value="0">1 = armor, 2 = shard, 3 = helm</real>
+<real key="urn_ammo" name="Ammo" value="0">1 = slugs, 2 = shells, 3 = fangs, 4 = cysts</real>
+<real key="urn_artifacts" name="Artifacts" value="0">2 = Drowner's App, 4 = Confounding attar, 5 = Soul Tether, 6 = Siphon, 8 = Aegis</real>
+</point>
+
+<point name="breakable_skull_small_d" color=".9 .8 .7" box="-16 -16 -16 16 16 16">
+Skull breakable prop, small humanoid.
+<model key="model" name="Model File" value="models/destructskulls/skull_a1.md3">Path/name of model to use</model>
+<angle key="angle" name="Yaw Angle">Direction in which model will be oriented.</angle>
+<angles key="angles" name="Pitch Yaw Roll">Individual control of PITCH, YAW, and ROLL (default 0 0 0).</angles>
+<real key="type" name="Variant" value="0"></real>
+<real key="urn_health" name="Lifeblood" value="0">1 = vial, 2 = beaker</real>
+<real key="urn_armor" name="Armor" value="0">1 = armor, 2 = shard, 3 = helm</real>
+<real key="urn_ammo" name="Ammo" value="0">1 = slugs, 2 = shells, 3 = fangs, 4 = cysts</real>
+<real key="urn_artifacts" name="Artifacts" value="0">2 = Drowner's App, 4 = Confounding attar, 5 = Soul Tether, 6 = Siphon, 8 = Aegis</real>
+</point>
+
+
+<!--
+=============================================================================
+
+FUNC_* ENTITIES
+
+=============================================================================
+-->
+
+<group name="func_bobbing" color="0 .5 .8">
+Solid entity that oscillates back and forth in a linear motion. By default, it will have an amount of displacement in either direction equal to the dimension of the brush in the axis in which it's bobbing. Entity bobs on the Z axis (up-down) by default. It can also emit sound if the "noise" key is set. Will crush the player when blocked.
+-------- KEYS --------
+<real key="speed" name="Bob Cycle Time">amount of time in seconds for one complete oscillation cycle (default 4).</real>
+<real key="height" name="Vertical Travel">sets the amount of travel of the oscillation movement (default 32).</real>
+<real key="phase" name="Bob Cycle Phase">sets the start offset of the oscillation cycle. Values must be 0 &lt; phase &lt; 1. Any integer phase value is the same as no offset (default 0).</real>
+<sound key="noise" name="Sound File">path/name of .wav file to play. Use looping sounds only (eg. sound/world/drone6.wav - See Notes).</sound>
+<model key="model2" name="Model File">path/name of model to include (eg: models/mapobjects/jets/jets01.md3).</model>
+<real3 key="origin" name="World Origin">alternate method of setting XYZ origin of sound and .md3 model included with entity (See Notes).</real3>
+<real key="light" name="Model Light Intensity">constantLight radius of .md3 model included with entity. Has no effect on the entity's brushes (default 0).</real>
+<color key="color" name="Model Light Color">constantLight color of .md3 model included with entity. Has no effect on the entity's brushes (default 1 1 1).</color>
+<boolean key="notfree" name="Hidden For FFA">when set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">when set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">when set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+-------- Q3MAP2 KEYS --------
+<targetname key="_targetname" name="Target Name">Used to attach a misc_model entity to this entity.</targetname>
+<real key="_lightmapscale" name="Lightmap Scale">Floating point value scaling the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+<integer key="_castshadows;_cs" name="Shadow Caster Level">Allows per-entity control over shadow casting. Defaults to 0 on entities, 1 on world. 0 = no shadow casting. 1 = cast shadows on world. > 1 = cast shadows on entities with _rs (or _receiveshadows) with the corresponding value, AND world. Negative values imply same, but DO NOT cast shadows on world.</integer>
+<integer key="_receiveshadows;_rs" name="Shadow Reciever Level">Allows per-entity control over shadow reception. Defaults to 1 on everything (world shadows). 0 = receives NO shadows. > 1 = receive shadows only from corresponding keyed entities (see above) and world. &lt; 1 = receive shadows ONLY from corresponding keyed entities.</integer>
+<texture key="_celshader" name="Cel Shader">Sets the cel shader used for this geometry. Note: omit the "textures/" prefix.</texture>
+-------- SPAWNFLAGS --------
+<flag key="X_AXIS" name="X Axis" bit="0">entity will bob along the X axis.</flag>
+<flag key="Y_AXIS" name="Y Axis" bit="1">entity will bob along the Y axis.</flag>
+-------- NOTES --------
+In order for the sound to be emitted from the entity, it is recommended to include a brush with an origin shader at its center, otherwise the sound will not follow the entity as it moves. Setting the origin key is simply an alternate method to using an origin brush. When using the model2 key, the origin point of the model will correspond to the origin point defined by either the origin brush or the origin coordinate value.
+
+Target this entity with a misc_model to have the model attached to the entity (set the model's "target" key to the same value as this entity's "targetname").
+</group>
+
+
+<group name="func_particles" color=".4 .4 .4">
+Particles Emitter, use an invisible brush to determine the area of spawning
+-------- KEYS --------
+<string key="particlename" name="Particle effect Name">which particle name will use, located in effectinfo.txt</string>
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to toggle the emitter.</targetname>
+<real key="delay" name="Delay time" value="0.5">Delay time between each particle spawning</real>
+<real key="density" name="Density ammount" value="1">multiply of ammount of particles.</real>
+<real key="count" name="ammount of particles" value="1">amount of particles(default is based on size of brush).</real>
+<flag key="using" name="Start Active" bit="1">The emitter will start emiting particles, if 0, targetname is required.</flag>
+</group>
+
+<point name="model_emitter" color=".4 .4 .4" box="-8 -8 -8 8 8 8">
+Particles Emitter, use an invisible point to determine the origin of spawning
+-------- KEYS --------
+<flag key="using" name="Start Active" bit="1">The emitter will start emiting particles, if 0, targetname is required.</flag>
+<targetname key="targetname" name="Target Name">Used to toggle on/off the emitter.</targetname>
+<real key="model1" name="Spawned Model A" value="particles/">Spawned model A</real>
+<real key="model2" name="Spawned Model B" value="particles/">Spawned model B</real>
+<real key="model3" name="Spawned Model C" value="particles/">Spawned model C</real>
+<real key="model4" name="Spawned Model D" value="particles/">Spawned model D</real>
+<real key="model5" name="Spawned Model E" value="particles/">Spawned model E</real>
+<real key="model6" name="Spawned Model F" value="particles/">Spawned model F</real>
+<real key="model7" name="Spawned Model G" value="particles/">Spawned model G</real>
+<real key="model8" name="Spawned Model H" value="particles/">Spawned model H</real>
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to toggle the emitter.</targetname>
+<real key="delay" name="Delay time" value="0.5">Delay time between each model spawning</real>
+<real key="gravity" name="Gravity" value="-0.1">Gravity of model (default normal gravity: 1).</real>
+<real key="loop" name="Looped" value="1">Is the use continous? -1 no, 1 YES</real>
+<real key="using" name="Active" value="1">The entity starts activated.</real>
+<real key="speed" name="Speed" value="16">default speed of the models .</real>
+<real key="count" name="Ammount of Particles" value="1">amount of particles model in each spawn.</real>
+<real key="min_time" name="Min Time Life" value="1">min time life before fade.</real>
+<real key="max_time" name="Max Time Life" value="1">max time life before fade.</real>
+<real key="min_size" name="Min Scale Size" value="1">min scale value.</real>
+<real key="max_size" name="Max Scale Size" value="1">max scale value.</real>
+<real key="clipdist" name="Clip Distance" value="512">Distance at which particles will no longer be shown. Default 512 units.</real>
+<real3 key="valpha" name="Alpha  Values" value="0 1 1">alpha (min_alpha max_alpha fade_rate).</real3>
+<real3 key="originoffset" name="Origin Offset" value="0 0 0">Offset particle spawning origin by this values. Coordspace are world, x – forward, y – right, z – up.</real3>
+<real3 key="originjitter" name="Origin Jitter" value="0 0 0">Like originoffset but each axis is jittered between -value/+value. Hence it is defining spherical shape of particle random spawning.</real3>
+<real3 key="velocityoffset" name="Velocity Offset" value="0 0 0">Add this amount of constant velocity to particle on spawn.</real3>
+<real3 key="velocityjitter" name="Velocity Jitter" value="0 0 0">Like velocity offset but each axis is jittered between -value/+value. Hence it is defining spherical shape of particle random spawning.</real3>
+<real key="particle_movetype" name="Movetype" value="8">NONE = 0, TOSS = 6, NOCLIP = 8, FLYMISSILE = 9, BOUNCE = 10, BOUNCEMISSILE = 11. </real>
+<real key="particle_modelflags" name="Modelflags" value="0">ROCKET = 1, GRENADE = 2, GIB = 4, ROTATE = 8, GREEN = 16, ZOMGIB = 32, ORANGE = 64, PURPLE = 128. </real>
+<string key="particlename" name="Trail Effect Name">which trail effect model will use if present, located in effectinfo.txt</string>
+</point>
+
+<group name="func_weather" color=".4 .4 .4">Particles Emitter, use an invisible brush to determine the area of spawning
+-------- KEYS --------
+<real key="type" name="Type of weather particle" value="1">
+		1 : Rain
+		2 : Snow
+</real>
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to toggle the emitter.</targetname>
+<real key="delay" name="Delay time" value="0.1">Delay time between each particle spawning</real>
+<real key="density" name="Density ammount" value="1">amount of particle density(default is 1).</real>
+<flag key="using" name="Start Active" bit="1">The emitter will start emiting particles, if 0, targetname is required.</flag>
+</group>
+
+
+<group name="func_illusionary" color="0 .5 .8">
+A simple entity that looks solid but lets you walk through it. Does not block light.
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to toggle the visibility of the func_illusionary.</targetname>
+<flag key="START_OFF" name="Start invisible" bit="0">When set, the brush will spawn invisible.</flag>
+</group>
+
+<group name="func_brush" color="0 .5 .8">
+A simple entity that looks solid but lets you walk through it. Does not block light.
+</group>
+
+<group name="func_fan" color="0 .5 .8">
+A simple entity that rotates.
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to toggle the emitter.</targetname>
+<real key="rot_ang_x" name="Rotate X" value="0">rotate speed for angle X</real>
+<real key="rot_ang_y" name="Rotate Y" value="0">rotate speed for angle Y</real>
+<real key="rot_ang_z" name="Rotate Z" value="0">rotate speed for angle Z</real>
+<flag key="START_OFF" name="Start OFF" bit="0">When set, the fan will spawn rotating.</flag>
+</group>
+
+
+<group name="func_wall" color="0 .5 .8">
+This is just a solid wall if not inhibitted.
+<boolean key="displacemente" name="Displacement Wall" value="0">Set to 1 and brush will be non solid and invisible until a trigger_displacement is used.</boolean>
+</group>
+
+
+<group name="func_water" color="0 .4 1">
+Liquids volume entity
+-------- KEYS --------
+<real key="alpha" name="Alpha" value="0.75">Transparency of water.</real>
+<real key="colormod" name="Color" value=".5 .5 .5">Water surface color, normalized RGB values (0-1, 0-1, 0-1).  Example of blue: .3 .45 .6</real>
+<real key="cshift" name="Underwater Color" value="64 64 64 128">Underwater color, RGB Alpha.  Example of blue: 16 32 48 128</real>
+<real key="watertype" name="Type of liquid" value="-3">
+		-3 : Water
+		-4 : Slime
+		-5 : Lava
+</real>
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to move the water as a door.</targetname>
+<real key="lip" name="Lip" value="0">Lip remaining at end of move. Default value is 0</real>
+<real key="speed" name="Move Speed" value="100">Determines how fast the water moves (default is 100).</real>
+<integer key="deep" name="deep water" value="0">set to 1 if water is placed underwater to prevent physics bugs(default 0).</integer>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scales the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+<flag key="START_OFF" name="Start Moved" bit="0">The water will spawn in the final pos and operate in reverse.</flag>
+<real key="height_water1" name="Height1" value="0">Height at which the entity will raise to upon being targeted. Each impulse will raise the entity by X units, until reaching the apex. Cannot be reset.
+ Default value is 0</real>
+<real key="height_water2" name="Height2" value="0">Height at which the entity will raise to upon being targeted. Each impulse will raise the entity by X units, until reaching the apex. Cannot be reset.
+ Default value is 0</real>
+<real key="height_water3" name="Height3" value="0">Height at which the entity will raise to upon being targeted. Each impulse will raise the entity by X units, until reaching the apex. Cannot be reset.
+ Default value is 0</real>
+</group>
+
+
+<group name="func_button" color="0 .4 1">
+When a button is touched by a player, it moves in the direction set by the "angle" key, triggers all its targets, stays pressed by an amount of time set by the "wait" key, then returns to it's original position where it can be operated again.
+-------- KEYS --------
+<direction key="angle" name="Direction">Determines the direction in which the button will move (up = -1, down = -2).</direction>
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<targetname key="targetname" name="Target Name">If set, other entities can be used to activate the button along with touch or damage way of doing that.</targetname>
+<real key="speed" name="Move Speed" value="40">Speed of button's displacement (default 40).</real>
+<real key="wait" name="Return Delay" value="1">Number of seconds button stays pressed (default 1, -1 = no return).</real>
+<real key="lip" name="Lip" value="0">Lip remaining at end of move. Default value is 0.</real>
+<boolean key="buttondecal" name="Decal Button" value="0">Set to 1 to add extra volume if the brush is a decal.</boolean>
+</group>
+
+
+<group name="func_door" color="0 .4 1">
+Normal sliding door entity. By default, the door will activate when player walks close to it or when damage is inflicted to it.
+-------- KEYS --------
+<direction key="angle" name="Direction">Determines the opening direction of door (up = -1, down = -2).</direction>
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to activate the door (unless using health key).</targetname>
+<real key="keyrequired" name="Key Required" value="0">Key need to open: 		0 : Unlocked
+		1 : Red key
+		2 : Blue key required
+		3 : Yellow key required</real>
+<boolean key="notouch" name="No Touch" value="0">Set to 1 so player can't activate by "use", such as when the door is targeted by another entity like a trigger or button.</boolean>
+<boolean key="fake_lighted" name="Fake Lightning" value="0">Set to 1 and brush will use fake lightning.</boolean>
+<boolean key="startnonsolid" name="Starts Non Solid" value="0">Set to 1 and brush will be non solid the first second (useful for node graph).</boolean>
+<real key="speed" name="Move Speed" value="200">Determines how fast the door moves (default is around 200).</real>
+<real key="wait" name="Return Delay" value="2">Number of seconds before door returns (default 2, -1 = never return)</real>
+<real key="lip" name="Lip" value="0">Lip remaining at end of move. Default value is 0</real>
+<integer key="dmg" name="Damage Inflicted" value="4">Damage to inflict on player when he blocks operation of door (default 4).</integer>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scaling the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+<flag key="START_OPEN" name="Start Open" bit="0">The door will spawn in the open state and operate in reverse.</flag>
+<string key="attached_model" name="Attached Model">name of the model attached to the door</string>
+</group>
+
+
+<group name="func_group" color="0 .4375 .7">
+This is not an entity as such. It is strictly an editor utility to group world brushes and patches together for convenience (selecting, moving, copying, etc). You cannot group entities with this.
+-------- Q3MAP2 KEYS --------
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scales the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+<integer key="_castshadows" name="Shadow Caster Level" value="1">Allows per-entity control over shadow casting. Defaults to 0 on entities, 1 on world. 0 = no shadow casting. 1 = cast shadows on world. &gt; 1 = cast shadows on entities with _rs (or _receiveshadows) with the corresponding value, AND world. Negative values imply same, but DO NOT cast shadows on world.</integer>
+<integer key="_receiveshadows" name="Shadow Reciever Level" value="1">Allows per-entity control over shadow reception. Defaults to 1 on everything (world shadows). 0 = receives NO shadows. &gt; 1 = receive shadows only from corresponding keyed entities (see above) and world. &lt; 1 = receive shadows ONLY from corresponding keyed entities.</integer>
+<texture key="_celshader" name="Cel Shader">Sets the cel shader used for this geometry. Note: Omit the "textures/" prefix.</texture>
+-------- Q3MAP2 TERRAIN KEYS --------
+<texture key="_indexmap" name="Terrain Blending Map">Path/name for the art file used to guide the mapping of textures on the terrain surface.</texture>
+<integer key="_layers" name="Terrain Layers">Integer value denotes number of unique root shaders that will be used on the terrain.</integer>
+<texture key="_shader" name="Terrain MetaShader">Path to the metashader used to assign textures to the terrain entity. Note: Omit the "textures/" prefix.</texture>
+-------- NOTES --------
+To make a func_group into a terrain entity, refer to the Terrain Construction documentation.
+</group>
+
+
+<group name="func_plat" color="0 .4 1">
+Rising platform the player can ride to reach higher places. Plats must always be drawn in the raised position, so they will operate and be lighted correctly but they spawn in the lowered position. The plat will stay in the raised position until the player steps off. There are no proper sounds for this entity, only beep noises. It will spawn in the game and work properly but it sounds silly (see notes).
+-------- KEYS --------
+<real key="speed" name="Move Speed" value="150">Determines how fast the plat moves (default 150).</real>
+<real key="lip" name="Lip" value="16">Lip remaining at end of move (default 16). Has no effect if "height" is set.</real>
+<real key="height" name="Vertical Travel">If set, this will determine the total amount of vertical travel of the plat.</real>
+<integer key="dmg" name="Damage Inflicted" value="4">Damage to inflict on player when he blocks operation of plat (default 4). Plat will reverse direction when blocked.</integer>
+<string key="noise" name="start sound 1">sound to play</string>
+<string key="noise1" name="working sound 2">sound to play</string>
+<string key="noise2" name="stop sound 3">sound to play</string>
+<real key="rad_sound" name="Sound Radius" value="256">Radius of sounds.</real>
+<real key="volume" name="Sound Volume" value="1">Volume of sounds.</real>
+<targetname key="targetname" name="Target Name">If set, the trigger that points to this will raise the plat each time it fires. The plat raises and comes back down a second later if no player is on it.</targetname>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scales the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+</group>
+
+
+<group name="func_destruct" color="0 .4 1">explodes in a shower of gibs when damaged.
+-------- KEYS --------
+<real key="health" name="Health" value="10">Health of the func.</real>
+<real key="min_damage" name="Minimun damage needed to destroy in a single hit" value="0"> Minimum damage needed in a single hit.</real>
+<real key="gibcount" name="Gib Count" value="4">Amount of gibs (default 4).</real>
+<real key="bouncefactor" name="Bounce" value="0.25">Bounciness of debris (default 0.25).</real>
+<real key="particlename" name="Particles">Name of particles (found in effectinfo.txt)</real>
+<boolean key="startnonsolid" name="Starts Non Solid" value="0">Set to 1 and brush will be non solid the first second (useful for node graph).</boolean>
+<real key="mass" name="Mass" value="0.75">Weight of debris (default 0.75).</real>
+<real key="noise" name="Sound Effect" value="sound/impact/destruct/">Weight of debris (default 0.75).</real>
+<real key="base_scale" name="Gib Scale" value="1">Scales size of gibs. "-1" is no scaling applied.</real>
+<real key="type" name="Material Type" value="0">	0 : "Custom (enables custom debris models)"
+		1 : "Stone"
+		2 : "Wood"
+		3 : "Metal"
+		4 : "Glass"
+		5 : "Ice"</real>
+<real key="gibmodel1" name="Debris Model A" value="models/destruct/">Custom derbis model A</real>
+<real key="gibmodel2" name="Debris Model B" value="models/destruct/">Custom derbis model B</real>
+<real key="gibmodel3" name="Debris Model V" value="models/destruct/">Custom derbis model C</real>
+<real key="rad_sound" name="Sound Radius" value="256">Radius of destruction sounds.</real>
+<real key="volume" name="Sound Volume" value="1">Volume of destruction sounds.</real>
+<real key="spread_vel" name="Spread Factor" value="0">Spread Factor.</real>
+<real key="only_damage_monster" name="Monster Damage" value="0">Can be destroyed only by monsters.</real>
+<real key="touch_smash" name="Touch Destruction" value="0">	0 : "No Touch Destruction"
+		1 : "Can be destroyed if touched by Player"
+		2 : "Can be destroyed if touched by Monsters"
+		3 : "Can be destroyed if touched by Player and Monsters"</real>
+<real key="touch_smash_delay" name="Touch Destruction Delay" value="0">(delay before be destroyed if touch destruction is enabled)</real>
+-------- Q3MAP2 KEYS --------
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<targetname key="targetname" name="Target Name">Used to attach a misc_model entity to this entity.</targetname>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scales the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+<integer key="_castshadows" name="Shadow Caster Level" value="0">Allows per-entity control over shadow casting. Defaults to 0 on entities, 1 on world. 0 = no shadow casting. 1 = cast shadows on world. &gt; 1 = cast shadows on entities with _rs (or _receiveshadows) with the corresponding value, AND world. Negative values imply same, but DO NOT cast shadows on world.</integer>
+<integer key="_receiveshadows" name="Shadow Reciever Level" value="1">Allows per-entity control over shadow reception. Defaults to 1 on everything (world shadows). 0 = receives NO shadows. &gt; 1 = receive shadows only from corresponding keyed entities (see above) and world. &lt; 1 = receive shadows ONLY from corresponding keyed entities.</integer>
+</group>
+
+
+<group name="func_destruct_rotate" color="0 .4 1">explodes in a shower of gibs when damaged.
+-------- KEYS --------
+<real key="gibcount" name="Gib Count" value="4">Amount of gibs (default 4).</real>
+<real key="bouncefactor" name="Bounce" value="0.25">Bounciness of debris (default 0.25).</real>
+<real key="particlename" name="Particles">Name of particles (found in effectinfo.txt)</real>
+<real key="mass" name="Mass" value="0.75">Weight of debris (default 0.75).</real>
+<real key="noise" name="Sound Effect at the start" value="sound/impact/destruct/">Sound Effect</real>
+<real key="noise2" name="Sound Effect at the end" value="sound/impact/destruct/">Second Sound Effect</real>
+<real key="base_scale" name="Gib Scale" value="1">Scales size of gibs. "-1" is no scaling applied.</real>
+<real key="type" name="Material Type" value="0">	0 : "Custom (enables custom debris models)"
+		1 : "Stone"
+		2 : "Wood"
+		3 : "Metal"
+		4 : "Glass"
+		5 : "Ice"</real>
+<real key="gibmodel1" name="Debris Model A" value="models/destruct/">Custom derbis model A</real>
+<real key="gibmodel2" name="Debris Model B" value="models/destruct/">Custom derbis model B</real>
+<real key="gibmodel3" name="Debris Model V" value="models/destruct/">Custom derbis model C</real>
+<real key="rad_sound" name="Sound Radius" value="256">Radius of destruction sounds.</real>
+<real key="volume" name="Sound Volume" value="1">Volume of destruction sounds.</real>
+<real key="spread_vel" name="Spread Factor" value="0">Spread Factor.</real>
+<real3 key="velocity" name="First stage velocity" value="0 0 0">velocity.</real3>
+<real3 key="velocity1" name="Second stage velocity" value="0 0 0">velocity.</real3>
+<real3 key="velocity2" name="Third stage velocity" value="0 0 0">velocity.</real3>
+<real3 key="avelocity" name="First stage avelocity" value="0 0 0">avelocity.</real3>
+<real3 key="avelocity1" name="Seconds stage avelocity" value="0 0 0">avelocity.</real3>
+<real3 key="avelocity2" name="Third stage avelocity" value="0 0 0">avelocity.</real3>
+<real key="wait" name="First stage Rotate Duration" value="32">Length of time it takes to complete rotation.</real>
+<real key="wait1" name="Second stage Rotate Duration" value="32">Length of time it takes to complete rotation.</real>
+<real key="wait2" name="Third stage Rotate Duration" value="32">Length of time it takes to complete rotation.</real>
+<target key="target2" name="Gib Zone Target"> Targetname of the gibzone.</target>
+-------- Q3MAP2 KEYS --------
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<targetname key="targetname" name="Target Name">Used to attach a misc_model entity to this entity.</targetname>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scales the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+<integer key="_castshadows" name="Shadow Caster Level" value="0">Allows per-entity control over shadow casting. Defaults to 0 on entities, 1 on world. 0 = no shadow casting. 1 = cast shadows on world. &gt; 1 = cast shadows on entities with _rs (or _receiveshadows) with the corresponding value, AND world. Negative values imply same, but DO NOT cast shadows on world.</integer>
+<integer key="_receiveshadows" name="Shadow Reciever Level" value="1">Allows per-entity control over shadow reception. Defaults to 1 on everything (world shadows). 0 = receives NO shadows. &gt; 1 = receive shadows only from corresponding keyed entities (see above) and world. &lt; 1 = receive shadows ONLY from corresponding keyed entities.</integer>
+<flag key="MF_ROTATE" name="Use Dynamic Light Grid" bit="0">The destruct will be lit by the lightgrid when falling.</flag>
+</group>
+
+<group name="func_rotate" color="0 .4 1">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+<real key="rot_ang_x" name="Rotate X" value="0">final angle value for X</real>
+<real key="rot_ang_y" name="Rotate Y" value="0">final angle value for Y</real>
+<real key="rot_ang_z" name="Rotate Z" value="0">final angle value for Z</real>
+<real key="wait" name="Rotate Duration" value="32">Length of time it takes to complete rotation.</real>
+</group>
+
+<group name="func_shrine" color="0 .4 1">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+<targetname key="targetname" name="Target Name">targetname is required to attach misc_model of shrine.</targetname>
+</group>
+
+
+
+
+<group name="func_trap" color="0 .4 1">
+Normal sliding door entity. By default, the door will activate when player walks close to it or when damage is inflicted to it.
+-------- KEYS --------
+<direction key="angle" name="Direction">Determines the opening direction of trap (up = -1, down = -2).</direction>
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to activate the door (unless using health key).</targetname>
+<boolean key="fake_lighted" name="Fake Lightning" value="0">Set to 1 and brush will use fake lightning.</boolean>
+<real key="speed" name="Open Move Speed" value="60">Determines how fast the crusher moves (default is around 60).</real>
+<real key="speed2" name="Close Move Speed" value="120">Determines how fast the crusher moves (default is around 120).</real>
+<real key="delay" name="Start Delay" value="0">Number of seconds (open delay)</real>
+<real key="wait" name="Return Delay" value="1">Number of seconds (open delay)</real>
+<real key="wait2" name="Return Delay" value="1">Number of seconds (close delay</real>
+<real key="lip" name="Lip" value="0">Lip remaining at end of move. Default value is 0</real>
+<integer key="dmg" name="Damage Inflicted" value="4">Damage value.</integer>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scaling the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+<real key="damagerate" name="Damage Rate" value="0.1">damage rate in seconds, if the value is -1, func will deal damage once then return to start position</real>
+<boolean key="kill_player" name="Kill Player" value="0"> Func will kill Player</boolean>
+<real key="loop" name="Loop Flag" value="0"> 0 = Func doesnt loop, start inactive. 1 = Func  loops, starts active. 2 = Func  loops, start inactive.</real>
+<boolean key="alwaysdamage" name="Always do damage" value="0"> Func deals damage whenever touched </boolean>
+<boolean key="forcecrouch" name="Force Crouch">Force crouch for player if causes damage (useful for vertical crushes)</boolean>
+</group>
+
+<group name="func_blade" color="0 .4 1">
+Normal sliding door entity. By default, the door will activate when player walks close to it or when damage is inflicted to it.
+-------- KEYS --------
+<direction key="angle" name="Direction">Determines the opening direction of blade (up = -1, down = -2).</direction>
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<targetname key="targetname" name="Target Name">If set, a func_button or trigger is required to activate the door (unless using health key).</targetname>
+<boolean key="fake_lighted" name="Fake Lightning" value="0">Set to 1 and brush will use fake lightning.</boolean>
+<real key="speed" name="Open Move Speed" value="60">Determines how fast the crusher moves (default is around 60).</real>
+<real key="speed2" name="Close Move Speed" value="120">Determines how fast the crusher moves (default is around 120).</real>
+<real key="wait" name="Return Delay" value="1">Number of seconds (open delay)</real>
+<real key="wait2" name="Return Delay" value="1">Number of seconds (close delay</real>
+<real key="lip" name="Lip" value="0">Lip remaining at end of move. Default value is 0</real>
+<real3 key="blade_offset" name="Offset XYZ" value="1 1 1"> Vector to reduce the size of the bbox for damage (default 1.0 1.0 1.0).</real3>
+<integer key="dmg" name="Damage Inflicted" value="4">Damage value.</integer>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scaling the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+<real key="damagerate" name="Damage Rate" value="0.1">damage rate in seconds, if the value is -1, func will deal damage once then return to start position</real>
+<boolean key="kill_player" name="Kill Player" value="0"> Func will kill Player</boolean>
+<real key="loop" name="Loop Flag" value="0"> 0 = Func doesnt loop, start inactive. 1 = Func  loops, starts active. 2 = Func  loops, start inactive.</real>
+<boolean key="alwaysdamage" name="Always do damage" value="0"> Func deals damage whenever touched </boolean>
+<boolean key="forcecrouch" name="Force Crouch">Force crouch for player if causes damage (useful for vertical crushes)</boolean>
+</group>
+
+<group name="func_ray" color=".8 .1 1">
+-------- FLAGS --------
+<flag key="START_OFF" name="Start Invisible" bit="0"/>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+<real3 key="valpha" name="Alpha Fades" value="0.01 1 1">Floating-point vector used to define fading in of object: start alpha, end alpha, and time taken to transition.</real3>
+<targetname key="targetname" name="Target Name"></targetname>
+</group>
+
+<point name="portal_level_to_hub" color=".5 0 .5" box="-8 -64 -64 8 64 64">
+A portal back to the hub that is activated by a targeting relic.
+<targetname key="targetname" name="Targetname"/>
+<real key="wait" name="Wait">delay before firing (after being triggered)</real>
+<string key="map" name="Next Map">name of the next map, dont use ".bsp" extension</string>
+<integer key="location" name="Location place">Location place number identifier related to the next map info_player_start.</integer>
+</point>
+
+
+<group name="func_train" color="0 .4 1">
+Trains are moving solids that follow a string of path_corner entities. Trains in Q3A are very basic, they also require an origin brush (see notes).
+-------- KEYS --------
+<real key="speed" name="Move Speed" value="100">Speed of displacement of train (default 100 or overridden by speed value of path).</real>
+<target key="target" name="Target">This points to the first path_corner of the path which is also the spawn location of the train's origin.</target>
+<model key="model2" name="Model File">Path/name of model to include (.md3 files only, e.g. models/mapobjects/pipe/pipe02.md3).</model>
+<real key="light" name="Model Light Intensity" value="0">ConstantLight radius of .md3 model included with entity. Has no effect on the entity's brushes (default 0).</real>
+<color key="color" name="Model Light Color" value="1 1 1">ConstantLight color of .md3 model included with entity. Has no effect on the entity's brushes (default 1 1 1).</color>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A point release 1.32 only. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
+-------- Q3MAP2 KEYS --------
+<targetname key="targetname" name="Target Name">Used to attach a misc_model entity to this entity.</targetname>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scales the resolution of lightmaps on brushes/patches in this entity (default 1.0).</real>
+<integer key="_castshadows" name="Shadow Caster Level" value="0">Allows per-entity control over shadow casting. Defaults to 0 on entities, 1 on world. 0 = no shadow casting. 1 = cast shadows on world. &gt; 1 = cast shadows on entities with _rs (or _receiveshadows) with the corresponding value, AND world. Negative values imply same, but DO NOT cast shadows on world.</integer>
+<integer key="_receiveshadows" name="Shadow Reciever Level" value="1">Allows per-entity control over shadow reception. Defaults to 1 on everything (world shadows). 0 = receives NO shadows. &gt; 1 = receive shadows only from corresponding keyed entities (see above) and world. &lt; 1 = receive shadows ONLY from corresponding keyed entities.</integer>
+<texture key="_celshader" name="Cel Shader">Sets the cel shader used for this geometry. Note: Omit the "textures/" prefix.</texture>
+-------- Q3MAP2 TERRAIN KEYS --------
+<texture key="_indexmap" name="Terrain Blending Map">Path/name for the art file used to guide the mapping of textures on the terrain surface.</texture>
+<integer key="_layers" name="Terrain Layers">Integer value denotes number of unique root shaders that will be used on the terrain.</integer>
+<texture key="_shader" name="Terrain MetaShader">Path to the metashader used to assign textures to the terrain entity. Note: Omit the "textures/" prefix.</texture>
+-------- NOTES --------
+1. Trains always start on in the game.
+2. Trains do not damage the player when blocked.
+3. Trains cannot emit sound.
+4. Trains are not triggerable or toggle-able.
+5. Trains cannot be block-stopped just by getting in their way, the player must be wedged between the train and another obstacle to block it.
+
+You need to have an origin brush as part of this entity. When using the model2 key, the origin point of the model will correspond to the origin point defined by the origin brush.
+
+Target this entity with a misc_model to have the model attached to the entity (set the model's "target" key to the same value as this entity's "targetname").
+</group>
+
+
+<!--
+=============================================================================
+
+PATH_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="path_corner" color=".5 .3 0" box="-8 -8 -8 8 8 8">
+Path corner entity that func_trains can be made to follow.
+-------- KEYS --------
+<target key="target" name="Target">Point to next path_corner in the path.</target>
+<targetname key="targetname" name="Target Name">The train following the path or the previous path_corner in the path points to this.</targetname>
+<real key="speed" name="Move Speed">Speed of func_train while moving to the next path corner. This will override the speed value of the train.</real>
+<real key="wait" name="Corner Delay" value="0">Number of seconds func_train will pause on path corner before moving to next path corner (default 0 - see notes).</real>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A point release 1.32 only. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
+-------- NOTES --------
+Setting the wait key to -1 will not make the train stop on the path corner, it will simply default to 0.
+</point>
+
+
+
+<!--
+=============================================================================
+
+TRIGGER_* ENTITIES
+
+=============================================================================
+-->
+<group name="trigger_changelevel" color="0.5 0.0 0.5">
+trigger that will move from one map to the next.
+<string key="map" name="Next Map">name of the next map, dont use ".bsp" extension</string>
+<integer key="location" name="Location place">Location place number identifier related to the next map info_player_start.</integer>
+</group>
+
+
+<group name="trigger_aggro" color="0.5 0.0 0.5">
+Targeted monster will become angry at player.
+<target key="target" name="Target">target entity</target>
+</group>
+
+
+<point name="trigger_counter" color="1 0 1" box="-12 -12 -12 12 12 12">
+Acts as an intermediary for an action that takes multiple inputs. If nomessage is not set, it will print "1 more.. " etc. when triggered and "sequence complete" when finished. After the counter has been triggered "count" times, it will fire all of its targets and remove itself.
+It's a once-only trigger (i.e. Wait is always -1).
+-------- FLAGS --------
+<flag key="nomessage" name="Not Easy" bit="0">disables count display</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<integer key="count" name="Count" value="2">number of triggers needed to fire own target, default is 2</integer>
+<target key="target" name="Target">target entity</target>
+<targetname key="targetname" name="Targetname"/>
+</point>
+
+<group name="trigger_once" color="0.5 0.0 0.5">
+Variable sized trigger. Triggers once, then removes itself. You must set the key "target" to the name of another object in the level that has a matching "targetname". If notouch is set, the trigger is only fired by other entities, not by touching.
+Wait is always -1.
+-------- FLAGS --------
+<flag key="notouch" name="No Touch" bit="0">only triggered by other entities, not by touching</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<boolean key="respawnable" name="Restart">Resets trigger so it can be triggered again upon level re-entry</boolean>
+<real key="player_weapon" name="if player has this weapon, make this trigger active,0 = no required weapon" value="0">	1 : "Coachgun"
+		2 : "Shotgun"
+		4 : "Fang Spitter"
+		8 : "Retcher"
+</real>
+<integer key="monstertouch" name="Activable by monster" value="0">0 = monsters will not touch it, 1 = monsters can touch and activate it, 2 = only monsters will touch and activate it </integer>
+<integer key="disarmed" name="Disarmed" value="0"> it will not fire when player touch, if value = 1 trigger should to be activated</integer>
+<integer key="sounds" name="Message Sound" value="0">Message Soundy</integer>
+<boolean key="health" name="Shootable">can be shot to activate</boolean>
+<angle key="angle" name="Facing Direction">if set, the trigger will only fire when someone is facing the direction of the angle, use "360" for angle 0.</angle>
+<real key="delay" name="Delay">delay before firing (after being triggered)</real>
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+</group>
+
+<group name="trigger_multiple" color="0.5 0.0 0.5">
+Variable sized trigger. Triggers multiple times. You must set the key "target" to the name of another object in the level that has a matching "targetname". If notouch is set, the trigger is only fired by other entities, not by touching.
+Wait is always -1.
+-------- FLAGS --------
+<flag key="notouch" name="No Touch" bit="0">only triggered by other entities, not by touching</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<real key="player_weapon" name="if player has this weapon, make this trigger active,0 = no required weapon" value="0">	1 : "Coachgun"
+		2 : "Shotgun"
+		4 : "Fang Spitter"
+		8 : "Retcher"
+</real>
+<integer key="monstertouch" name="Activable by monster" value="0">0 = monsters will not touch it, 1 = monsters can touch and activate it, 2 = only monsters will touch and activate it </integer>
+<real key="wait" name="Trigger Wait" value="1">Number of seconds before trigger can be activated again.</real>
+<integer key="disarmed" name="Disarmed" value="0"> it will not fire when player touch, if value = 1 trigger should to be activated</integer>
+<integer key="sounds" name="Message Sound" value="0">Message Soundy</integer>
+<boolean key="health" name="Shootable">can be shot to activate</boolean>
+<angle key="angle" name="Facing Direction">if set, the trigger will only fire when someone is facing the direction of the angle, use "360" for angle 0.</angle>
+<real key="delay" name="Delay">delay before firing (after being triggered)</real>
+</group>
+
+<group name="trigger_secret" color="0.5 0.0 0.5">
+Secret counter trigger.
+-------- FLAGS --------
+<flag key="notouch" name="No Touch" bit="0">only triggered by other entities, not by touching</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<string key="message" name="Message">message to display when triggered</string>
+</group>
+
+<group name="trigger_teleport" color="0.5 0.0 0.5">
+Any object touching this will be transported to the corresponding info_teleport_destination entity. You must set the "target" field, and create an object with a "targetname" field that matches.
+-------- FLAGS --------
+<flag key="PLAYER_ONLY" name="Player Only" bit="0">only players will teleport</flag>
+<flag key="SILENT" name="Silent" bit="1">silences teleporting</flag>
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<target key="target" name="Target">name of info_teleport_destination</target>
+</group>
+
+<group name="trigger_shrine" color="0.5 0.0 0.5">
+Shrine trigger.
+</group>
+
+<group name="trigger_monsterjump" color="0.5 0.0 0.5">
+Walking monsters that touch this will jump in the direction of the trigger's angle.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<angle key="angle" name="Direction">angle towards the monster jumps</angle>
+<real key="speed" name="Speed" value="200">the speed thrown forward. default is 200</real>
+<real key="height" name="Height" value="200">the speed thrown upwards. default is 200</real>
+<real key="viewer_deviance" name="Angles Deviance" value="0">if value is > 0, trigger will work if enemy of monster is infront of the trigger, the angles are the value of the "infront" value, 120 is a regular value </real>
+<real key="count" name="Count" value="0">if value is > 0 number of uses avaible for the trigger</real>
+<real key="type" name="Type" value="0">1 = trigger will work only if enemy is under the monster, 2 = trigger will work only if enemy is above the monster </real>
+</group>
+
+<group name="trigger_jumppad" color="0.5 0.0 0.5">
+Players that touch this will jump in the direction of the targetted target_position
+<target key="target" name="Target">point target, destination of the jump</target>
+<real key="speed" name="Speed" value="1000">the speed thrown forward. default is 1000</real>
+<real key="stoptime" name="No input Time" value="0">how much time inputs for player will be deactived,0 value forces a frikfiked value</real>
+</group>
+
+<point name="trigger_relay" color="0.5 0.0 0.5" box="-8 -8 -8 8 8 8">
+This fixed size trigger cannot be touched, it can only be fired by other events.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<boolean key="killtarget" name="Remove Target">removes target</boolean>
+<target key="target" name="Target">fires target when triggered</target>
+<real key="delay" name="Delay">delay before firing (after being triggered)</real>
+<boolean key="killtarget2" name="Remove Target">removes target2</boolean>
+<target key="target2" name="Target">fires target2 when triggered</target>
+<real key="delay2" name="Delay">delay before firing target2 (after being triggered)</real>
+<boolean key="killtarget3" name="Remove Target">removes target3</boolean>
+<target key="target3" name="Target">fires target3 when triggered</target>
+<real key="delay3" name="Delay">delay before firing target3 (after being triggered)</real>
+<boolean key="killtarget4" name="Remove Target">removes target4</boolean>
+<target key="target4" name="Target">fires target4 when triggered</target>
+<real key="delay4" name="Delay">delay before firing target4 (after being triggered)</real>
+<boolean key="killtarget5" name="Remove Target">removes target5</boolean>
+<target key="target5" name="Target">fires target5 when triggered</target>
+<real key="delay5" name="Delay">delay before firing target5 (after being triggered)</real>
+<boolean key="killtarget6" name="Remove Target">removes target6</boolean>
+<target key="target6" name="Target">fires target6 when triggered</target>
+<real key="delay6" name="Delay">delay before firing target6 (after being triggered)</real>
+<boolean key="killtarget7" name="Remove Target">removes7 target</boolean>
+<target key="target7" name="Target">fires target7 when triggered</target>
+<real key="delay7" name="Delay">delay before firing target7 (after being triggered)</real>
+<boolean key="killtarget8" name="Remove Target">removes target 8</boolean>
+<target key="target8" name="Target">fires target 8 when triggered</target>
+<real key="delay8" name="Delay">delay before firing target 8 (after being triggered)</real>
+<string key="message" name="Message">displayed when fired</string>
+<string key="targetname" name="Target Name">The Relay will activate when another entity fires this name.</string>
+</point>
+
+<point name="trigger_shake" color="0.5 0.0 0.5" box="-8 -8 -8 8 8 8">
+This fixed size trigger cannot be touched, it can only be fired by other events.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<targetname key="targetname" name="Target Name">The activating trigger points to this.</targetname>
+<real key="wait" name="Wait" value="1">shake time duration (in seconds, default = 1)</real>
+<real key="intensity_y" name="Vertical Intensity" value="10">vertical shake intensity (default = 10)</real>
+<real key="intensity_x" name="Horizontal Intensity" value="10">horizontal shake intensity (default = 10)</real>
+<real key="shake_camera_refresh_rate" name="Refresh Rate" value="0.05">refresh rate in seconds (default = 0.05)</real>
+<real key="sradius" name="Radius" value="0">Radius of shake in map units (0 = inifnite radius)</real>
+<boolean key="sattenuation" name="Attenuation">Attenuation of intensity based on distance, if radius is setted</boolean>
+</point>
+
+<group name="trigger_lightning" color="0.5 0.0 0.5">
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+If the trigger is touched by player random lightnings will spawn, useful only for exterior areas.
+<flag key="using" name="Start Active" bit="1">The trigger lightning will start active, if 0, targetname is required.</flag>
+<targetname key="targetname" name="Target Name"> A func_button or trigger is required to activate it.</targetname>
+<real key="wait" name="Wait" value="10">Minimum time lapse between lightnings, -1 = single lightning</real>
+<real key="delay" name="Additional Random Wait" value="10">Additional time that is added to the wait, the values are from 0 to the value of the specific</real>
+</group>
+
+<group name="trigger_hurt" color="0.5 0.0 0.5">
+Any object touching this will be hurt.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<targetname key="targetname" name="Target Name"> A func_button or trigger is required to activate it.</targetname>
+<real key="dmg" name="Damage Inflicted" value="5">sets damage, default is 5</real>
+<string key="message" name="Message">message text</string>
+<flag key="using" name="Start Active" bit="1">The emitter will start active, if 0, targetname is required.</flag>
+<real key="kill_player" name="Kill Player" value="0"> Trigger will kill Player</real>
+<real key="only_to_player" name="Damage only to Player" value="0"> Trigger will hurt only Player</real>
+<real key="wait" name="Return Delay" value="1">Number of seconds before trigger will hurt again (default 1, -1 = never do damage again)</real>
+<real key="allowoverlap" name="Overlap" value="0">If set to 1, allows overlapping triggers to act as a single trigger</real>
+</group>
+
+<group name="trigger_fog" color="0.5 0.0 0.5">
+Trigger fog to change the fog values and interpolates the values over time
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<real key="wait" name="Transition Time" value="1">Number of seconds transition will take. Default value is 1.</real>
+<real key="n_fog_d" name="Density" value="0"> Density value of the fog.</real>
+<real key="n_fog_r" name="Red" value="0"> Red value of the fog.</real>
+<real key="n_fog_g" name="Green" value="0"> Green value of the fog.</real>
+<real key="n_fog_b" name="Blue" value="0"> Blue value of the fog.</real>
+<real key="n_fog_a" name="Alpha" value="1"> Alpha value of the fog. Default value is 1.</real>
+<real key="n_fog_s" name="Start" value="0"> Start distance from player fog will be rendered.</real>
+<real key="n_fog_e" name="End" value="16384"> The maximum distance the _fog_ will be rendered from the player. Default value is 16384.</real>
+<real key="n_fog_h" name="Height" value="1073741824"> Height of the fog top. Default value is 1073741824.</real>
+<real key="n_fog_f" name="Fade Depth" value="128"> Fade depth value of the fog. Default value is 128.</real>
+</group>
+
+<group name="trigger_angle" color="0.5 0.0 0.5">
+Changes the angles of monsters.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<real key="minorangle" name="Min Angle factor" value="0">sets min angle factor to touch, from 1 to -1</real>
+<target key="target" name="Target">target info_angle to set y angles </target>
+<direction key="angle" name="Direction">Determines the orientation angle of the trigger.</direction>
+</group>
+
+<group name="trigger_turret" color="0.5 0.0 0.5">
+Turn some monsters in turrets.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<real key="turret_enemy_visible" name="Enemy is Visible" value="0"> Turret model will be avaible only when player is visible</real>
+<real key="angle_deviance" name="Angle deviance" value="90">range of angles at which the monster will behave as a turret (this is both a positive and negative value, default is 90)</real>
+<target key="target" name="Target">if present target info_angle to set y angles </target>
+</group>
+
+
+<group name="trigger_no_check_angles" color="0.5 0.0 0.5">
+Turn some monsters in turrets.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<real key="no_fixed_angles_time" name="Time" value="0">time in seconds when the checking angles AI will be off, use -1 to activate it again</real>
+</group>
+
+
+<group name="trigger_fly" color="0.5 0.0 0.5">
+Sigil of Flight
+<real key="duration" name="Fly Duration" value="10">Number in seconds of the duration of the effect. A value of -1 will stop the flying effect.  </real>
+</group>
+
+<group name="trigger_displacement" color="0.5 0.0 0.5">
+Sigil of Displacement
+<real key="duration" name="Displacement Duration" value="10">Number in seconds of the duration of the effect. </real>
+</group>
+
+
+<group name="trigger_gibzone" color="0.5 0.0 0.5">
+trigger that will determine the zone of the spawning gibs for func_destruct and func_destruct_rotate
+<targetname key="targetname" name="Targetname">targetname of the entity</targetname>
+</group>
+
+<point name="trigger_artifact_checker" color="0.5 0.0 0.5" box="-8 -8 -8 8 8 8">
+This fixed size trigger cannot be touched, it can only be fired by other events.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<target key="target" name="Target">fires target when player uses selected artifact</target>
+<real key="type" name="Artifact used by player that will trigger the entity" value="1">
+		1 : "Mark Revelation
+		2 : "Drowner App"
+		3 : "Berseker"
+		4 : "Attar"
+		5 : "Black Grenade"
+		6 : "Life Siphon"
+		7 : "Trinket of Respite"
+		8 : "Cruel Aegis"
+		9 : "Vicious Idol"
+		10 : "Ring of Fire"
+</real>
+</point>
+
+
+<!--
+=============================================================================
+
+INFO_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="info_beam" color=".8 .1 1" box="-8 -8 -8 8 8 8">
+Starting point for emitting purple energy beam for e2m4 map.
+<flag key="using" name="Start Active" bit="1">The emitter will start emiting particles, if 0, targetname is required.</flag>
+<target key="target" name="Target">Target this to an info_notnull</target>
+<targetname key="targetname" name="Target Name">Target the beam to switch it on.</targetname>
+<real key="wait" name="Wait delay" value="-1">Duration of beam. Set to -1 for permanent.</real>
+<real key="dmg" name="Damage Inflicted" value="-1">Damage inflicted</real>
+</point>
+
+<point name="info_chain" color=".8 .6 .4" box="-8 -8 -8 8 8 8">
+Procedural hanging chain.
+<target key="target" name="Target">Target this to an info_notnull</target>
+<real key="height" name="Height">Relative height of chain curve ( slack )</real>
+<real key="offset_angle" name="Offset Angle"></real>
+<real key="scale" name="Scale">Scale of chain models</real>
+<real key="lip" name="Lip" value="0">Adds or subtracts links from end of the chain</real>
+</point>
+
+<point name="info_null" color=".8 .8 .8" box="-8 -8 -8 8 8 8">
+Used as a positional target for light entities to create a spotlight effect. A target_position can be used instead of this but was kept in Q3A for legacy purposes.
+-------- KEYS --------
+<targetname key="targetname" name="Target Name">Must match the target key of entity that uses this for pointing.</targetname>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A point release 1.32 only. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
+</point>
+
+<point name="info_notnull" color=".8 .8 .8" box="-8 -8 -8 8 8 8">
+Used as a positional target for entities that can use directional pointing. A target_position can be used instead of this but was kept in Q3A for legacy purposes.
+-------- KEYS --------
+<targetname key="targetname" name="Target Name">Must match the target key of entity that uses this for pointing.</targetname>
+</point>
+
+<point name="info_node" color="1 .5 0" box="-64 -64 -16 64 64 16" model="models/dev/node_ed.md3">
+Navigation node, for Wrath monster pathing.
+Place nodes at least 128 units apart, indicated by circumference ring on model.
+</point>
+
+<point name="info_angle" color="0 .5 0" box="-8 -8 -8 8 8 8">
+Used as a angle target for trigger_angle
+-------- KEYS --------
+<targetname key="targetname" name="Target Name">Must match the target key of entity that uses this for pointing.</targetname>
+</point>
+
+<point name="info_player_start" color=".8 .8 .8" box="-16 -16 -32 16 16 32">
+The normal starting point for a level. Only one is allowed.
+-------- FLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<integer key="location" name="Location place">Location place number identifier related to the last trigger_exitlevel touched in the previous level.</integer>
+<angle key="angle" name="Yaw Angle">viewing angle when spawning</angle>
+</point>
+
+<point name="info_player_deathmatch" color=".7 .7 .7" box="-16 -16 -24 16 16 32">
+Normal player spawning location for Q3A levels.
+-------- KEYS --------
+<angle key="angle" name="Yaw Angle">Direction in which player will look when spawning in the game. Does not apply to bots.</angle>
+<target key="target" name="Target">This can point at a target_give entity for respawn freebies.</target>
+<boolean key="nobots" name="No Bots">When set to 1, bots will never use this spawn point to respawn in the game.</boolean>
+<boolean key="nohumans" name="No Humans">When set to 1, human players will never use this spawn point to respawn in the game.</boolean>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A point release 1.32 only. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
+-------- SPAWNFLAGS --------
+<flag key="INITIAL" name="Initial Spawn Point" bit="0">Makes the spawnpoint the initial place for the player to spawn at the beginning of the game.</flag>
+</point>
+
+<point name="info_player_intermission" color=".5 .5 .5" box="-16 -16 -16 16 16 16">
+Camera for intermission screen between matches. This also automatically generates the podium for bot arena matches (see notes). Can be aimed by setting the "angles" key or targeting an pointing to an aiming entity. Use only one per level.
+-------- KEYS --------
+<angles key="angles" name="Pitch Yaw Roll">Alternate "pitch, yaw, roll" angles method of aiming intermission camera (default 0 0 0).</angles>
+<target key="target" name="Target">Point this to an info_notnull or target_position entity to set the camera's pointing angles.</target>
+-------- NOTES --------
+In genuine bot arena matches, the podium for the 1st, 2nd and 3rd place players at the end of the match is generated by this entity. The podium's origin will automatically be located 128 units in the direction of the camera's view and 84 units down from the y height of the view line at that point. It will also always be generated on a level plane regardless of the pointing angle of the camera so if that angle is too steep, part of the podium model might not be visible. Make sure you leave at least 106 units of free space in front of where the camera points to otherwise the podium model won't be visible at all.
+</point>
+
+<point name="info_teleport_destination" color="1 1 1" box="-32 -32 -24 32 32 -16">
+Teleport destination location point for trigger_teleporter entities.
+-------- KEYS --------
+<angle key="angle" name="Yaw Angle">Direction in which player will look when teleported.</angle>
+<targetname key="targetname" name="Target Name">Make the trigger_teleporter point to this.</targetname>
+</point>
+
+<point name="teleporter" color="1 .5 .25" box="-16 -16 -32 16 16 32" model="models/objects/teleporters/teleporter.md3">
+A standard teleporter that transports the player between a pair of linked teleporters.It is both, destination and origin.Using models/objects/teleporter.md3 as model.
+-------- KEYS --------
+<angle key="angle" name="Yaw Angle">Direction in which player will look when teleported.</angle>
+<real key="inactive" name="Disarmed" value="0"> 1 Turns the teleporter invisible and inactive, it should be triggered to active it </real>
+<targetname key="targetname" name="Target Name">Make the trigger_teleporter point to this.</targetname>
+<target key="target" name="Target">Targetname of linked teleporter.</target>
+</point>
+
+
+
+<!--
+=============================================================================
+
+BOSS_* ENTITIES
+
+=============================================================================
+-->
+
+<point name="boss_guardian3" color=".9 .3 0" box="-128 -128 -128  128 128 256">
+3rd boss monster, The Dreadful One. The big bad, the final form.
+-------- KEYS --------
+<target key="target" name="Target">Targetname of linked teleporter.</target>
+<targetname key="targetname" name="Target Name">Must match the target key of entity that uses this for pointing.</targetname>
+</point>
+
+<point name="boss_path" color=".8 .6 .6" box="-12 -12 -12  12 12 12">
+Point to which boss monsters will travel, depending on their behaviour. Like a path_corner for normal monsters to walk between.
+-------- KEYS --------
+<target key="target" name="Target">Targetname of linked teleporter.</target>
+<targetname key="targetname" name="Target Name">Must match the target key of entity that uses this for pointing.</targetname>
+</point>
+
+<point name="boss_finalpath" color=".8 .6 .6" box="-16 -16 -16  16 16 16">
+Point to which boss monsters will travel, depending on their behaviour. Final destination for boss3.
+-------- KEYS --------
+<target key="target" name="Target">Targetname of linked teleporter.</target>
+<targetname key="targetname" name="Target Name">Must match the target key of entity that uses this for pointing.</targetname>
+</point>
+
+<point name="boss_summoner" color=".7 .2 0" box="-16 -16 -24 16 16 24">
+Point at which boss3 will spawn monsters during summonings.
+-------- KEYS --------
+<real key="classmonster1" name="Encounter" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying brain claw )
+</real>
+<real key="classmonster2" name="Encounter1" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying brain claw )
+</real>
+<real key="classmonster3" name="Encounter2" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying brain claw )
+</real>
+<real key="classmonster4" name="Encounter3" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying brain claw )
+</real>
+<real key="classmonster5" name="Encounter4" value="1">
+        1 : "Fallen" ( zombie )
+        2 : "Invader" ( shotgunner zombie )
+        3 : "Wretch" ( plasma lightbulb )
+        4 : "Prowler" ( invisible manspider )
+        5 : "Widow" ( fast zombie )
+        6 : "Wraith" ( plasma scrag )
+        7 : "Heretic" ( grey cacodemon )
+        8 : "Lurker" ( nopefish )
+        9 : "Oppressor" ( lava revenant )
+        10 : "Executioner" ( big bad blade boi )
+        11 : "Stricken" ( artillery frog )
+        12 : "Afflicted" ( slime zombie )
+        13 : "Melon Head" ( suck it and see )
+        14 : "Symbol" ( space invader squid )
+        15 : "Brute" ( metal gorilla )
+        16 : "Keeper" ( flying brain claw )
+</real>
+<target key="target" name="Target"></target>
+<targetname key="targetname" name="Target Name">Must match the target key of entity that uses this for pointing.</targetname>
+</point>
+
+<point name="boss_martyr" color="1 0 0" box="-16 -16 -32 16 16 32" model="models/enemies/martyr/martyr.md3">
+Martyr creature, focal point of boss3 summoning behaviour.
+-------- KEYS --------
+<target key="target" name="Target"></target>
+<targetname key="targetname" name="Target Name">Must match the target key of entity that uses this for pointing.</targetname>
+</point>
+
+<point name="boss_orb" color="1 .1 0" box="-12 -12 -12 12 12 12">
+Blood orb, generated from Martyr creature for boss3 summonings.
+-------- KEYS --------
+<target key="target" name="Target">This should point at the associated boss_martyr entity</target>
+<targetname key="targetname" name="Target Name">Must match the target key of entity that uses this for pointing.</targetname>
+</point>
+
+
+
+
+
+<!--
+=============================================================================
+
+LIGHT ENTITY
+
+=============================================================================
+-->
+
+<point name="light" color=".65 .65 1" box="-8 -8 -8 8 8 8">
+Non-displayed point light source. The -pointscale and -scale arguments to Q3Map2 affect the brightness of these lights. The -skyscale argument affects brightness of entity sun lights.
+-------- Q3MAP2 KEYS --------
+<real key="light" name="Light Intensity" value="300">Overrides the default 300 intensity. Negative values may be used for negative lights.</real>
+<color key="_color" name="Light Color" value="1 1 1">Weighted RGB value of light color (default 1.0 1.0 1.0 = white).</color>
+<target key="target" name="Target">Lights pointed at a target will be spotlights.</target>
+<real key="radius" name="Spotlight Radius" value="64">Overrides the default 64 unit radius of a spotlight at the target point.</real>
+<boolean key="_sun" name="Sun">Set this key to 1 on a spotlight to make an infinite sun light.</boolean>
+<real key="fade" name="Linear Fade" value="1">Fades light attenuation. Only affects linear lights.</real>
+<real key="scale" name="Intensity Scale" value="1">Scales light attenuation, from SOF2/JK2. Scales the "light" value.</real>
+<real key="_deviance" name="Penumbra Deviance" value="0">Penumbra effect - distance measured in world units for point/spot lights, and degrees for suns (~0.5-3).</real>
+<integer key="_samples" name="Penumbra Samples" value="1">Penumbra effect - the number of random jitters distributed over the solid arc (~16).</integer>
+<boolean key="_filter" name="Lightmap Filtering">Set this key to 1 to toggle on lightmap filtering.</boolean>
+<real key="_filterradius" name="Filter Radius">Filters lightmaps within set radius.</real>
+<real key="_anglescale" name="Light Attenuation Scale" value="1">Scales light attenuation. Smaller values lessens angle attenuation, larger values for sharper, more faceted lighting (default 1.0).</real>
+<integer key="style" name="Light Style Index">Light style index number associated with worldspawn light style. Values are between 1 and 31.</integer>
+-------- SPAWNFLAGS --------
+<flag key="LINEAR" name="Linear Falloff" bit="0">Use a linear falloff. Default is inverse distance squared (more realistic).</flag>
+<flag key="NOANGLE" name="No Angle Attenuation" bit="1">Ignore angle attenuation.</flag>
+<flag key="NOGRIDLIGHT" name="Not Dynamic" bit="4">Do not affect the lightgrid (dynamic entity lighting).</flag>
+</point>
+
+
+<point name="lightJunior" color="0 0.7 0.3" box="-6 -6 -6 6 6 6">
+Non-displayed point light source THAT ONLY AFFECTS ENTITIES (lightgrid). The -pointscale and -scale arguments to Q3Map2 affect the brightness of these lights. The -skyscale argument affects brightness of entity sun lights.
+-------- Q3MAP2 KEYS --------
+<real key="_light" name="Light Intensity" value="300">Overrides the default 300 intensity.</real>
+<color key="_color" name="Light Color" value="1 1 1">Weighted RGB value of light color (default 1.0 1.0 1.0 = white).</color>
+<target key="target" name="Target">Lights pointed at a target will be spotlights.</target>
+<real key="radius" name="Spotlight Radius" value="64">Overrides the default 64 unit radius of a spotlight at the target point.</real>
+<boolean key="_sun" name="Sun">Set this key to 1 on a spotlight to make an infinite sun light.</boolean>
+<real key="fade" name="Linear Fade" value="1">Fades light attenuation. Only affects linear lights.</real>
+<real key="scale" name="Intensity Scale" value="1">Scales light attenuation, from SOF2/JK2. Scales the "light" value.</real>
+-------- SPAWNFLAGS --------
+<flag key="LINEAR" name="Linear Falloff" bit="0">Use a linear falloff. Default is inverse distance squared (more realistic).</flag>
+<flag key="NOANGLE" name="No Angle Attenuation" bit="1">Ignore angle attenuation.</flag>
+<flag key="NOGRIDLIGHT" name="Not Dynamic" bit="4">Do not affect the lightgrid (dynamic entity lighting). Setting this spawnflag will disable this light entirely.</flag>
+</point>
+
+
+
+<!--
+=============================================================================
+
+MISC_* ENTITIES
+
+=============================================================================
+-->
+
+
+<point name="misc_model" color=".8 .6 .3" box="-16 -16 -16 16 16 16" model="{ path : model }">
+Generic placeholder for inserting MD3 models in game. Requires compilation of map geometry to be added to level. If the map is compiled with Q3Map2, then ASE, 3DS, OBJ and other model formats are supported.
+-------- Q3MAP2 KEYS --------
+<model key="model" name="Model File">Path/name of model to use (e.g. models/mapobjects/teleporter/teleporter.md3).</model>
+<angle key="angle" name="Yaw Angle">Direction in which model will be oriented.</angle>
+<angles key="angles" name="Pitch Yaw Roll">Individual control of PITCH, YAW, and ROLL (default 0 0 0).</angles>
+<real key="modelscale" name="Uniform Scale" value="1">Floating-point value used to scale a model up or down (default 1.0).</real>
+<real3 key="modelscale_vec" name="Scale XYZ" value="1 1 1">Floating-point vector used to scale a model's axes individually (default 1.0 1.0 1.0).</real3>
+<array key="_remap" name="Shader Remaps">Used to remap textures/shaders in the model. To remap all shaders to a given shader, use "*;models/mymodel/mytexture". To remap a specific shader, use "models/mymodel/old;models/mymodel/new".</array>
+<target key="target" name="Target">Used to attach the misc_model to a brush entity, where its "targetname" key is the same value.</target>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scales the resolution of lightmaps on this model (if model is using lightmapped shaders) (default 1.0).</real>
+<integer key="_castshadows" name="Shadow Caster Level" value="1">Allows per-entity control over shadow casting. Defaults to 0 on entities, 1 on world. 0 = no shadow casting. 1 = cast shadows on world. &gt; 1 = cast shadows on entities with _rs (or _receiveshadows) with the corresponding value, AND world. Negative values imply same, but DO NOT cast shadows on world.</integer>
+<integer key="_receiveshadows" name="Shadow Reciever Level" value="1">Allows per-entity control over shadow reception. Defaults to 1 on everything (world shadows). 0 = receives NO shadows. &gt; 1 = receive shadows only from corresponding keyed entities (see above) and world. &lt; 1 = receive shadows ONLY from corresponding keyed entities.</integer>
+<texture key="_celshader" name="Cel Shader">Sets the cel shader used for this geometry. Note: Omit the "textures/" prefix.</texture>
+<real key="_clipdepth" name="Autoclip thickness" value="2">Autoclip brushes thickness (default 2.0).</real>
+-------- SPAWNFLAGS --------
+<flag key="_RMG_BSP" name="_RMG_BSP" bit="0">in SoF2, append a _RMG_BSP suffix to shader names instead of _BSP</flag>
+<flag key="CLIPMODEL" name="Clip Model" bit="1">Clips the model for player/weapon collisions; extruding every face along most perpendicular axial direction. For use on large architectural or terrain models, not for small decorative models.</flag>
+<flag key="FORCEMETA" name="Force Meta" bit="2">Toggles on q3map_forceMeta for lightmapped models. Converts model triangles to bsp metasurfaces.</flag>
+<flag key="EXTRUDE_FACE_NORMALS" name="EXTRUDE_FACE_NORMALS" bit="3">extrude along the model face normals for clipping</flag>
+<flag key="EXTRUDE_TERRAIN" name="EXTRUDE_TERRAIN" bit="4">extrude each surface of the model along its average axial direction ( up/down/west/east/north/south ); faces with not matching direction (or too steep) are clipped in default mode</flag>
+<flag key="COLOR_TO_ALPHA" name="COLOR_TO_ALPHA" bit="5">use the color value as alpha (for terrain blending)</flag>
+<flag key="NOSMOOTH" name="NOSMOOTH" bit="6">Don't smooth normals when importing (forces all faces planar).</flag>
+<flag key="EXTRUDE_VERTEX_NORMALS" name="EXTRUDE_VERTEX_NORMALS" bit="7">extrude along the model vertex normals for clipping; accurate collisions, if normals are fine; bad ones are replaced with 45 degrees to face</flag>
+<flag key="PYRAMIDAL_CLIP" name="PYRAMIDAL_CLIP" bit="8">pyramidal clipping brushes (4-sided); accurate collisions</flag>
+<flag key="EXTRUDE_DOWNWARDS" name="EXTRUDE_DOWNWARDS" bit="9">for horizontal terrain; when not possible, extrude in default mode</flag>
+<flag key="EXTRUDE_UPWARDS" name="EXTRUDE_UPWARDS" bit="10">-//-</flag>
+<flag key="MAX_EXTRUDE" name="MAX_EXTRUDE" bit="11">Extrude to the max/min point of every model surface to reduce bsp size (uses axial back plane)</flag>
+<flag key="AXIAL_BACKPLANE" name="AXIAL_BACKPLANE" bit="12">use axial back plane for clipping brushes to effectively reduce bsp size; might cause unwanted collisions, make sure to -debugclip; negative _clipdepth / -clipdepth limits max thickness of resulting brushes (making non-axial backplane, if hit the limit)</flag>
+other possible modes of clipping:
+CLIPMODEL+AXIAL_BACKPLANE
+EXTRUDE_FACE_NORMALS+PYRAMIDAL_CLIP - truncated pyramid with 45 degrees sides
+EXTRUDE_TERRAIN+MAX_EXTRUDE
+EXTRUDE_TERRAIN+AXIAL_BACKPLANE
+EXTRUDE_VERTEX_NORMALS + PYRAMIDAL_CLIP - vertex normals mode: don't check for sides, sticking outwards
+PYRAMIDAL_CLIP+AXIAL_BACKPLANE - pyramid with 3 of 4 sides axial (->small bsp)
+EXTRUDE_DOWNWARDS+EXTRUDE_UPWARDS
+EXTRUDE_DOWNWARDS+MAX_EXTRUDE
+EXTRUDE_DOWNWARDS+AXIAL_BACKPLANE
+EXTRUDE_DOWNWARDS+EXTRUDE_UPWARDS+MAX_EXTRUDE
+EXTRUDE_DOWNWARDS+EXTRUDE_UPWARDS+AXIAL_BACKPLANE
+EXTRUDE_UPWARDS+MAX_EXTRUDE
+EXTRUDE_UPWARDS+AXIAL_BACKPLANE
+</point>
+
+<point name="model_destruct" color="1 .5 .25" box="-16 -16 -16 16 16 16" model="{ path : model }">
+Explodes in a shower of gibs when damaged.
+-------- KEYS --------
+<model key="model" name="Model File">Path/name of model to use (e.g. models/mapobjects/teleporter/teleporter.md3).</model>
+<real key="health" name="Health" value="10">Health of the model.</real>
+<real key="gibcount" name="Gib Count" value="4">Amount of gibs (default 4).</real>
+<real key="bouncefactor" name="Bounce" value="0.25">Bounciness of debris (default 0.25).</real>
+<real key="particlename" name="Particles">Name of particles (found in effectinfo.txt)</real>
+<boolean key="startnonsolid" name="Starts Non Solid" value="0">Set to 1 and brush will be non solid the first second (useful for node graph).</boolean>
+<real key="mass" name="Mass" value="0.75">Weight of debris (default 0.75).</real>
+<real key="noise" name="Sound Effect" value="sound/impact/destruct/">Weight of debris (default 0.75).</real>
+<real key="base_scale" name="Gib Scale" value="1">Scales size of gibs. "-1" is no scaling applied.</real>
+<real key="type" name="Material Type" value="0">	0 : "Custom (enables custom debris models)"
+		1 : "Stone"
+		2 : "Wood"
+		3 : "Metal"
+		4 : "Glass"
+		5 : "Ice"</real>
+<real key="gibmodel1" name="Debris Model A" value="models/destruct/">Custom derbis model A</real>
+<real key="gibmodel2" name="Debris Model B" value="models/destruct/">Custom derbis model B</real>
+<real key="gibmodel3" name="Debris Model V" value="models/destruct/">Custom derbis model C</real>
+<real key="rad_sound" name="Sound Radius" value="256">Radius of destruction sounds.</real>
+<real key="volume" name="Sound Volume" value="1">Volume of destruction sounds.</real>
+<real key="spread_vel" name="Spread Factor" value="0">Spread Factor.</real>
+<real key="only_damage_monster" name="Monster Damage" value="0">Can be destroyed only by monsters.</real>
+<real key="touch_smash" name="Touch Destruction" value="0">	0 : "No Touch Destruction"
+		1 : "Can be destroyed if touched by Player"
+		2 : "Can be destroyed if touched by Monsters"
+		3 : "Can be destroyed if touched by Player and Monsters"</real>
+<real key="touch_smash_delay" name="Touch Destruction Delay" value="0">(delay before be destroyed if touch destruction is enabled)</real>
+-------- Q3MAP2 KEYS --------
+<target key="target" name="Target">All entities with a matching targetname will be triggered.</target>
+<targetname key="targetname" name="Target Name">Used to attach a misc_model entity to this entity.</targetname>
+</point>
+
+<point name="place_model" color="1 .5 .25" box="-16 -16 -16 16 16 16" model="{ path : model }">
+Generic placeholder for inserting MD3 models in game. Doesnt Requires compilation of map geometry to be added to level.
+-------- Q3MAP2 KEYS --------
+<model key="model" name="Model File">Path/name of model to use (e.g. models/mapobjects/teleporter/teleporter.md3).</model>
+<angles key="angles" name="Pitch Yaw Roll">Individual control of PITCH, YAW, and ROLL (default 0 0 0).</angles>
+<real key="scale" name="Uniform Scale" value="1">Floating-point value used to scale a model up or down (default 1.0).</real>
+</point>
+
+<point name="place_shepherd" color=".7 .7 .7" box="-16 -16 -32 16 16 32" model="models/enemies/shepherd.md3">
+The Shepherd of Wayward Souls. For INTRO and HUB map appearances.
+-------- SPAWNFLAGS --------
+<flag key="HUB" name="Hub Behaviour" bit="0">The Shepherd will deliver monologues appropriate for each encounter level in a hub map.</flag>
+</point>
+
+<!--
+=============================================================================
+-->
+
+
+<point name="misc_portal_camera" color="1 .5 .25" box="-8 -8 -8 8 8 8">
+Portal camera. This camera is used to project its view onto a portal surface in the level through the intermediary of a misc_portal_surface entity. Use the "angles" key or target a target_position or info_notnull entity to set the camera's pointing direction.
+-------- KEYS --------
+<angles key="angles" name="Pitch Yaw Roll">This sets the pitch and yaw aiming angles of the portal camera (default 0 0). Use "roll" key to set roll angle.</angles>
+<target key="target" name="Target">Point this to a target_position entity to set the camera's pointing direction.</target>
+<targetname key="targetname" name="Target Name">A misc_portal_surface portal surface indicator must point to this.</targetname>
+<real key="roll" name="Roll">Roll angle of camera. A value of 0 is upside down and 180 is the same as the player's view.</real>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A point release 1.32 only. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
+-------- SPAWNFLAGS --------
+<flag key="SLOWROTATE" name="Rotate Slowly" bit="0">Makes the portal camera rotate slowly along the roll axis.</flag>
+<flag key="FASTROTATE" name="Rotate Faster" bit="1">Makes the portal camera rotate faster along the roll axis.</flag>
+<flag key="NOWOBBLE" name="No Wobble" bit="2">Stops the camera portal from wobbling. Q3A point release 1.32.</flag>
+-------- NOTES --------
+Both the setting "angles" key or "targeting a target_position" methods can be used to aim the camera. However, the target_position method is simpler. In both cases, the "roll" key must be used to set the roll angle. If either the SLOWROTATE or FASTROTATE spawnflag is set, then the "roll" value is irrelevant.
+</point>
+
+<!--
+=============================================================================
+-->
+
+<point name="misc_portal_surface" color="1 .5 .25" box="-8 -8 -8 8 8 8">
+Portal surface indicator. This will "lock on" the brush face closest to it and identify as a portal. The view displayed on the portal surface is the view of the misc_portal_camera that this entity targets. Also used for mirrors (see notes).
+-------- KEYS --------
+<target key="target" name="Target">Point this to a misc_portal_camera that "sees" the view you want to display on the portal.</target>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A point release 1.32 only. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
+-------- NOTES --------
+The entity must be no farther than 64 units away from the portal surface to lock onto it. To make a mirror, apply the common/mirror shader to the surface, place this entity near it but don't target a misc_portal_camera.
+</point>
+
+<point name="misc_lightning" color="1 1 1" box="-2 -2 -2 2 2 2">
+Lightning. It requires a big real time light of 12, 13 , 14 lightstyles placed in rtlights file in maps/ folder.
+-------- KEYS --------
+<real key="style" name="Light Style" value="0">	12 : "12 lightstyle"
+		13 : "13 lightstyle"
+		14 : "14 lightstyle"</real>
+<string key="noise" name="clap thunder sound 1">sound to play, default is env/thunder_clap1.ogg</string>
+<string key="noise1" name="clap thunder sound 2">sound to play, default is env/thunder_clap2.ogg</string>
+<string key="noise2" name="clap thunder sound 3">sound to play, default is env/thunder_clap3.ogg</string>
+<targetname key="targetname" name="Target Name">If used, misc_lightning should be targeted by button or trigger</targetname>
+<real key="wait" name="Wait delay" value="10">amount of time between each lightning flash</real>
+<real key="delay" name="Delay" value="10"> amount of time between each lightning flash + wait, it will work for the first spawn as well </real>
+</point>
+
+<point name="misc_cyst" color="0 1 0" box="-8 -8 -8 8 8 8" model="models/items/cysts.md3">
+3 Retcher ammo.
+-------- SPAWNFLAGS --------
+<flag key="NOT_EASY" name="Not Easy" bit="8"/>
+<flag key="NOT_NORMAL" name="Not Hard" bit="9"/>
+<flag key="NOT_HARD" name="Not Normal" bit="10"/>
+<flag key="NOT_DM" name="Not Deathmatch" bit="11"/>
+-------- KEYS --------
+<targetname key="targetname" name="Target Name">Cyst can explode it with func_button or trigger</targetname>
+<real key="dmg" name="Damage Inflicted" value="16">Damage caused by explosion</real>
+<real key="sradius" name="Radius" value="16">Radius of explosion</real>
+<real key="health" name="Health" value="16">Health of the cyst. if health is 0 it should be triggered to explode</real>
+<real key="scale" name="Model Scale" value="2">Scale of the model, it will affect collisions box size</real>
+<real key="type" name="Model Type" value="1">Values from 1 to 4, it will change the default cyst model</real>
+</point>
+
+
+
+<!--
+=============================================================================
+
+WORLDSPAWN ENTITY
+
+=============================================================================
+-->
+
+<group name="worldspawn" color="0 0 0">
+Only used for the world.
+-------- KEYS --------
+<string key="message" name="Logon Message">Text to print at user logon. Used for name of level.</string>
+<sound key="music" name="Music File">Path/name of looping .wav file used for level's music (e.g. music/sonic5.wav).</sound>
+<real key="gravity" name="Gravity" value="800">Gravity of level (default normal gravity: 800).</real>
+-------- Q3MAP2 KEYS --------
+<integer key="gridsize" name="Dynamic Light Granularity" value="128 128 256">Granularity of the lightgrid created by q3map. Value is three integers separated by spaces, representing number of units between grid points in X Y Z. Default gridsize value is 128 128 256. Use larger powers of 2 to reduce BSP size and compile time on very large maps.</integer>
+<integer key="_blocksize" name="BSP Block Size" value="1024 1024 1024">Q3Map always splits the BSP tree along the planes X=_blocksize*n and Y=_blocksize*n. Increase the blocksize using larger powers of 2 to reduce compile times on very large maps with a low structural brush density (default 1024 1024 1024, 0 values = disable).</integer>
+<real key="_ambient" name="Ambient Intensity" value="0">Adds a constant value to overall lighting. Use is not recommended. Ambient light will have a tendency to flatten out variations in light and shade.</real>
+<color key="_color" name="Ambient Color" value="1 1 1">RGB color value for ambient and other global light parameters (default is 1 1 1).</color>
+<real key="_minlight" name="Min Lightmap Intensity" value="0">Minimum light value, levelwide. Uses the _color key to set color. Does not add unlike ambient.</real>
+<real key="_minvertexlight" name="Min Vertex Intensity" value="0">Minimum vertex lighting, levelwide.</real>
+<real key="_mingridlight" name="Min Dynamic Intensity" value="0">Minimum lightgrid (dynamic entity lighting) levelwide.</real>
+<boolean key="_keeplights" name="Keep Light Entities">Keep light entities in the BSP. Normally stripped out by the BSP process and read from the .map file by the lighting phase.</boolean>
+<boolean key="_noshadersun" name="Ignore Shader Sun">Ignore q3map_sun/sun directives in sky shaders and ONLY use entity sun lights.</boolean>
+<real key="_farplanedist" name="Far Clip Distance">Limit on how many units the vis phase of compilation can see. Used in combination with level-wide fog, it can help reduce r_speeds on large, open maps.</real>
+<texture key="_foghull" name="Fog Hull Shader">Shader to use for "fog hull". Foghull shader should be a sky shader. Omit the "textures/" prefix.</texture>
+<real key="_lightmapscale" name="Lightmap Scale" value="1">Floating point value scales the resolution of lightmaps on brushes/patches in the world. Can be overridden in func_group (or other entities) (default 1.0).</real>
+<integer key="_castshadows" name="Shadow Caster Level" value="1">Allows per-entity control over shadow casting. Defaults to 0 on entities, 1 on world. 0 = no shadow casting. 1 = cast shadows on world. &gt; 1 = cast shadows on entities with _rs (or _receiveshadows) with the corresponding value, AND world. Negative values imply same, but DO NOT cast shadows on world.</integer>
+<integer key="_receiveshadows" name="Shadow Reciever Level" value="1">Allows per-entity control over shadow reception. Defaults to 1 on everything (world shadows). 0 = receives NO shadows. &gt; 1 = receive shadows only from corresponding keyed entities (see above) and world. &lt; 1 = receive shadows ONLY from corresponding keyed entities.</integer>
+<texture key="_celshader" name="Cel Shader">Sets the cel shader used for this geometry. Note: Omit the "textures/" prefix.</texture> Overridable in entities.
+<string key="_styleNalphaGen" name="Style Light alphaGen">*IMPORTANT* Replace "N" in the key "_styleNalphaGen" with an integer between 1 and 31 as your style index. Values takes standard shader waveform functions (e.g. wave sin 0.5 0.3 0.25 1.5)</string>
+<string key="_styleNrgbGen" name="Style Light rgbGen">*IMPORTANT* Replace "N" in the key "_styleNrgbGen" with an integer between 1 and 31 as your style index. Values take standard shader waveform functions (e.g. wave sin 0.5 0.3 0.25 1.5)</string>
+-------- Q3MAP2 TERRAIN KEYS --------
+<texture key="_indexmap" name="Terrain Blending Map">Path/name for the art file used to guide the mapping of textures on the terrain surface.</texture>
+<integer key="_layers" name="Terrain Layers">Integer value denotes number of unique root shaders that will be used on the terrain.</integer>
+<texture key="_shader" name="Terrain MetaShader">Path to the metashader used to assign textures to the terrain entity. Note: Omit the "textures/" prefix.</texture>
+</group>
+</classes>
